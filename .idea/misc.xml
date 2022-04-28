@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.20989583333333334" />
+        <entry key="app/src/main/res/drawable-v24/gradient2.xml" value="0.169" />
+        <entry key="app/src/main/res/drawable/downloads.xml" value="0.193" />
+        <entry key="app/src/main/res/drawable/gnt_outline_shape.xml" value="0.193" />
+        <entry key="app/src/main/res/drawable/gradient.xml" value="0.169" />
+        <entry key="app/src/main/res/drawable/shape.xml" value="0.193" />
+        <entry key="app/src/main/res/drawable/shape2.xml" value="0.193" />
+        <entry key="app/src/main/res/layout/activity_books.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_jee_books.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/activity_jee_books_new.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/activity_jee_books_phy.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/activity_jee_material.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1816123188405797" />
+        <entry key="app/src/main/res/layout/activity_main2.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/activity_main3.xml" value="0.19114583333333332" />
+        <entry key="app/src/main/res/layout/activity_main4.xml" value="0.19114583333333332" />
+        <entry key="app/src/main/res/layout/activity_main5.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/activity_neet_material.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/activity_pdf.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/activity_pdf_view.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/activity_pdf_viewer.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/activity_pdf_viewer_java.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/activity_view_book.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/ad_view.xml" value="0.19114583333333332" />
+        <entry key="app/src/main/res/layout/bottom_sheet.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/fragment_bitsat_materials.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/fragment_bitsat_pyq.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/fragment_bitsat_test_paper.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/fragment_cbse_materials.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/fragment_comedk_materials.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/fragment_downloads.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/fragment_explore.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/fragment_home2.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/fragment_jee_books.xml" value="0.17325227963525835" />
+        <entry key="app/src/main/res/layout/fragment_jee_books_list.xml" value="0.13134057971014493" />
+        <entry key="app/src/main/res/layout/fragment_jee_books_maths.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/fragment_jee_books_phy.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/fragment_jee_dpp.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/fragment_jee_lectures.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/fragment_jee_materials.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/fragment_jee_materials_book.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/fragment_jee_notes.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/fragment_jee_notes_chem.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/fragment_jee_notes_maths.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/fragment_jee_notes_phy.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/fragment_neet_materials.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/fragment_vit_materials.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/fragment_wbjee_materials.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/fragment_wbjee_pyq.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/fragment_wbjee_test_paper.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/item_books.xml" value="0.30851063829787234" />
+        <entry key="app/src/main/res/layout/item_downloads.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/my_ad_card_view.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/my_item_card_view.xml" value="0.35625" />
+        <entry key="app/src/main/res/menu/na_menu.xml" value="0.35625" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

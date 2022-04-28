@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/gradient"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    >
+
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:text="Downloads"
+        android:textColor="@color/teal_200"
+        android:textSize="30sp" />
+    <androidx.appcompat.widget.SearchView
+        android:layout_width="wrap_content"
+        android:padding="10dp"
+        android:id="@+id/downloadsSearchView"
+        android:layout_height="50dp"/>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:padding="20dp"
+        android:background="@drawable/shape"
+        android:id="@+id/downloadRv"
+        android:layout_width="match_parent"
+        android:layout_height="800dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/downloadsSearchView"/>
+    <TextView
+        android:id="@+id/downloadFlag"
+        android:visibility="gone"
+        android:textColor="@color/black"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape"
+        android:paddingTop="200dp"
+        android:gravity="center"
+        android:text="No downloaded Books"
+        android:textSize="20sp"/>
+</LinearLayout>

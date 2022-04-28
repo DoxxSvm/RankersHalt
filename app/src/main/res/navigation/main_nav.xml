@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/homeFragment2">
+
+    <fragment
+        android:id="@+id/downloadsFragment"
+        android:name="com.doxx.rankershalt.DownloadsFragment"
+        android:label="fragment_downloads"
+        tools:layout="@layout/fragment_downloads" />
+    <fragment
+        android:id="@+id/jeeMaterialsFragment"
+        android:name="com.doxx.rankershalt.JeeMaterialsFragment"
+        android:label="fragment_jee_materials"
+        tools:layout="@layout/fragment_jee_materials" >
+        <action
+            android:id="@+id/action_jeeMaterialsFragment_to_jeeBooksFragment"
+            app:destination="@id/jeeBooksFragment"
+            app:enterAnim="@transition/slide_in_right"
+            app:exitAnim="@transition/slide_out_left"
+            app:popEnterAnim="@transition/slide_in_left"
+            app:popExitAnim="@transition/slide_out_right"/>
+        <action
+            android:id="@+id/action_jeeMaterialsFragment_to_jeeNotesFragment"
+            app:destination="@id/jeeNotesFragment" />
+        <action
+            android:id="@+id/action_jeeMaterialsFragment_to_jeeTestPaperFragment"
+            app:destination="@id/jeeTestPaperFragment" />
+        <action
+            android:id="@+id/action_jeeMaterialsFragment_to_jeePyqFragment"
+            app:destination="@id/jeePyqFragment" />
+        <action
+            android:id="@+id/action_jeeMaterialsFragment_to_jeeDppFragment"
+            app:destination="@id/jeeDppFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/exploreFragment"
+        android:name="com.doxx.rankershalt.ExploreFragment"
+        android:label="fragment_explore"
+        tools:layout="@layout/fragment_explore"/>
+    <fragment
+        android:id="@+id/homeFragment2"
+        android:name="com.doxx.rankershalt.HomeFragment"
+        android:label="fragment_home2"
+        tools:layout="@layout/fragment_home2" >
+        <action
+            android:id="@+id/action_homeFragment2_to_jeeMaterialsFragment"
+            app:destination="@id/jeeMaterialsFragment"
+            app:enterAnim="@transition/slide_in_right"
+            app:exitAnim="@transition/slide_out_left"
+            app:popEnterAnim="@transition/slide_in_left"
+            app:popExitAnim="@transition/slide_out_right"/>
+        <action
+            android:id="@+id/action_homeFragment2_to_neetMaterialsFragment"
+            app:destination="@id/neetMaterialsFragment"
+            app:enterAnim="@transition/slide_in_right"
+            app:exitAnim="@transition/slide_out_left"
+            app:popEnterAnim="@transition/slide_in_left"
+            app:popExitAnim="@transition/slide_out_right"/>
+        <action
+            android:id="@+id/action_homeFragment2_to_comedkMaterialsFragment"
+            app:destination="@id/comedkMaterialsFragment" />
+        <action
+            android:id="@+id/action_homeFragment2_to_wbjeeMaterialsFragment"
+            app:destination="@id/wbjeeMaterialsFragment" />
+        <action
+            android:id="@+id/action_homeFragment2_to_bitsatMaterialsFragment"
+            app:destination="@id/bitsatMaterialsFragment" />
+        <action
+            android:id="@+id/action_homeFragment2_to_vitMaterialsFragment"
+            app:destination="@id/vitMaterialsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/jeeBooksFragment"
+        android:name="com.doxx.rankershalt.JeeBooksFragment"
+        android:label="fragment_jee_books"
+        tools:layout="@layout/fragment_jee_books">
+        <action
+            android:id="@+id/action_jeeBooksFragment_to_jeeBooksPhyFragment"
+            app:destination="@id/jeeBooksPhyFragment" >
+            <argument
+                android:name="heading"
+                android:defaultValue="Physics Books" />
+        </action>
+        <action
+            android:id="@+id/action_jeeBooksFragment_to_jeeBooksChemFragment"
+            app:destination="@id/jeeBooksChemFragment"/>
+        <action
+            android:id="@+id/action_jeeBooksFragment_to_jeeBooksMathsFragment"
+            app:destination="@id/jeeBooksMathsFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/jeeBooksPhyFragment"
+        android:name="com.doxx.rankershalt.JeeBooksPhyFragment"
+        android:label="fragment_jee_books_phy"
+        tools:layout="@layout/fragment_jee_books_list" >
+        <argument
+            android:name="heading"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/jeeBooksChemFragment"
+        android:name="com.doxx.rankershalt.JeeBooksChemFragment"
+        android:label="fragment_jee_books_chem"
+        tools:layout="@layout/fragment_jee_books_list" >
+        <argument
+            android:name="heading"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/jeeBooksMathsFragment"
+        android:name="com.doxx.rankershalt.JeeBooksMathsFragment"
+        android:label="fragment_jee_books_maths"
+        tools:layout="@layout/fragment_jee_books_list" >
+        <argument
+            android:name="heading"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/jeeNotesFragment"
+        android:name="com.doxx.rankershalt.JeeNotesFragment"
+        android:label="fragment_jee_notes"
+        tools:layout="@layout/fragment_jee_notes" >
+        <action
+            android:id="@+id/action_jeeNotesFragment_to_jeeNotesMathsFragment"
+            app:destination="@id/jeeNotesMathsFragment" />
+        <action
+            android:id="@+id/action_jeeNotesFragment_to_jeeNotesMathsFragment2"
+            app:destination="@id/jeeNotesMathsFragment" />
+        <action
+            android:id="@+id/action_jeeNotesFragment_to_jeeNotesChemFragment"
+            app:destination="@id/jeeNotesChemFragment" />
+        <action
+            android:id="@+id/action_jeeNotesFragment_to_jeeNotesPhyFragment"
+            app:destination="@id/jeeNotesPhyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/jeeNotesPhyFragment"
+        android:name="com.doxx.rankershalt.JeeNotesPhyFragment"
+        android:label="fragment_jee_notes_phy"
+        tools:layout="@layout/fragment_jee_books_list">
+        <argument
+            android:name="heading"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/jeeNotesChemFragment"
+        android:name="com.doxx.rankershalt.JeeNotesChemFragment"
+        android:label="fragment_jee_notes_chem"
+        tools:layout="@layout/fragment_jee_books_list">
+        <argument
+            android:name="heading"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/jeeNotesMathsFragment"
+        android:name="com.doxx.rankershalt.JeeNotesMathsFragment"
+        android:label="fragment_jee_notes_maths"
+        tools:layout="@layout/fragment_jee_books_list">
+        <argument
+            android:name="heading"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/neetMaterialsFragment"
+        android:name="com.doxx.rankershalt.NeetMaterialsFragment"
+        android:label="fragment_neet_materials"
+        tools:layout="@layout/fragment_neet_materials" />
+    <fragment
+        android:id="@+id/comedkMaterialsFragment"
+        android:name="com.doxx.rankershalt.ComedkMaterialsFragment"
+        android:label="fragment_comedk_materials"
+        tools:layout="@layout/fragment_comedk_materials" >
+        <action
+            android:id="@+id/action_comedkMaterialsFragment_to_jeeNotesFragment"
+            app:destination="@id/jeeNotesFragment" />
+        <action
+            android:id="@+id/action_comedkMaterialsFragment_to_jeeDppFragment"
+            app:destination="@id/jeeDppFragment" />
+        <action
+            android:id="@+id/action_comedkMaterialsFragment_to_comedkTestPaperFragment"
+            app:destination="@id/comedkTestPaperFragment" />
+        <action
+            android:id="@+id/action_comedkMaterialsFragment_to_comedkPyqFragment"
+            app:destination="@id/comedkPyqFragment" />
+        <action
+            android:id="@+id/action_comedkMaterialsFragment_to_jeeBooksFragment"
+            app:destination="@id/jeeBooksFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/wbjeeMaterialsFragment"
+        android:name="com.doxx.rankershalt.WbjeeMaterialsFragment"
+        android:label="fragment_wbjee_materials"
+        tools:layout="@layout/fragment_wbjee_materials" >
+        <action
+            android:id="@+id/action_wbjeeMaterialsFragment_to_jeeBooksFragment"
+            app:destination="@id/jeeBooksFragment" />
+        <action
+            android:id="@+id/action_wbjeeMaterialsFragment_to_jeeNotesFragment"
+            app:destination="@id/jeeNotesFragment" />
+        <action
+            android:id="@+id/action_wbjeeMaterialsFragment_to_wbjeePyqFragment"
+            app:destination="@id/wbjeePyqFragment" />
+        <action
+            android:id="@+id/action_wbjeeMaterialsFragment_to_wbjeeTestPaperFragment"
+            app:destination="@id/wbjeeTestPaperFragment" />
+        <action
+            android:id="@+id/action_wbjeeMaterialsFragment_to_jeeDppFragment"
+            app:destination="@id/jeeDppFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bitsatMaterialsFragment"
+        android:name="com.doxx.rankershalt.BitsatMaterialsFragment"
+        android:label="fragment_bitsat_materials"
+        tools:layout="@layout/fragment_bitsat_materials" >
+        <action
+            android:id="@+id/action_bitsatMaterialsFragment_to_jeeNotesFragment"
+            app:destination="@id/jeeNotesFragment" />
+        <action
+            android:id="@+id/action_bitsatMaterialsFragment_to_jeeBooksFragment"
+            app:destination="@id/jeeBooksFragment" />
+        <action
+            android:id="@+id/action_bitsatMaterialsFragment_to_bitsatPyqFragment"
+            app:destination="@id/bitsatPyqFragment" />
+        <action
+            android:id="@+id/action_bitsatMaterialsFragment_to_bitsatTestPaperFragment"
+            app:destination="@id/bitsatTestPaperFragment" />
+        <action
+            android:id="@+id/action_bitsatMaterialsFragment_to_jeeDppFragment"
+            app:destination="@id/jeeDppFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/vitMaterialsFragment"
+        android:name="com.doxx.rankershalt.VitMaterialsFragment"
+        android:label="fragment_vit_materials"
+        tools:layout="@layout/fragment_vit_materials" >
+        <action
+            android:id="@+id/action_vitMaterialsFragment_to_jeeBooksFragment"
+            app:destination="@id/jeeBooksFragment" />
+        <action
+            android:id="@+id/action_vitMaterialsFragment_to_jeeNotesFragment"
+            app:destination="@id/jeeNotesFragment" />
+        <action
+            android:id="@+id/action_vitMaterialsFragment_to_vitPyqFragment"
+            app:destination="@id/vitPyqFragment" />
+        <action
+            android:id="@+id/action_vitMaterialsFragment_to_vitTestPaperFragment"
+            app:destination="@id/vitTestPaperFragment" />
+        <action
+            android:id="@+id/action_vitMaterialsFragment_to_jeeDppFragment"
+            app:destination="@id/jeeDppFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/jeeTestPaperFragment"
+        android:name="com.doxx.rankershalt.JeeTestPaperFragment"
+        android:label="fragment_jee_test_paper"
+        tools:layout="@layout/fragment_jee_books_list" />
+    <fragment
+        android:id="@+id/jeePyqFragment"
+        android:name="com.doxx.rankershalt.JeePyqFragment"
+        android:label="fragment_jee_pyq"
+        tools:layout="@layout/fragment_jee_books_list" />
+    <fragment
+        android:id="@+id/wbjeeTestPaperFragment"
+        android:name="com.doxx.rankershalt.WbjeeTestPaperFragment"
+        android:label="fragment_wbjee_test_paper"
+        tools:layout="@layout/fragment_jee_books_list" />
+    <fragment
+        android:id="@+id/wbjeePyqFragment"
+        android:name="com.doxx.rankershalt.WbjeePyqFragment"
+        android:label="fragment_wbjee_pyq"
+        tools:layout="@layout/fragment_jee_books_list" />
+    <fragment
+        android:id="@+id/vitPyqFragment"
+        android:name="com.doxx.rankershalt.VitPyqFragment"
+        android:label="fragment_vit_pyq"
+        tools:layout="@layout/fragment_jee_books_list" />
+    <fragment
+        android:id="@+id/vitTestPaperFragment"
+        android:name="com.doxx.rankershalt.VitTestPaperFragment"
+        android:label="fragment_vit_test_paper"
+        tools:layout="@layout/fragment_jee_books_list" />
+    <fragment
+        android:id="@+id/bitsatPyqFragment"
+        android:name="com.doxx.rankershalt.BitsatPyqFragment"
+        android:label="fragment_bitsat_pyq"
+        tools:layout="@layout/fragment_jee_books_list" />
+    <fragment
+        android:id="@+id/bitsatTestPaperFragment"
+        android:name="com.doxx.rankershalt.BitsatTestPaperFragment"
+        android:label="fragment_bitsat_test_paper"
+        tools:layout="@layout/fragment_jee_books_list" />
+    <fragment
+        android:id="@+id/jeeDppFragment"
+        android:name="com.doxx.rankershalt.JeeDppFragment"
+        android:label="fragment_jee_dpp"
+        tools:layout="@layout/fragment_jee_dpp" >
+        <action
+            android:id="@+id/action_jeeDppFragment_to_jeeDppMathsFragment"
+            app:destination="@id/jeeDppMathsFragment" />
+        <action
+            android:id="@+id/action_jeeDppFragment_to_jeeDppPhyFragment"
+            app:destination="@id/jeeDppPhyFragment" />
+        <action
+            android:id="@+id/action_jeeDppFragment_to_jeeDppChemFragment"
+            app:destination="@id/jeeDppChemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/jeeDppPhyFragment"
+        android:name="com.doxx.rankershalt.JeeDppPhyFragment"
+        android:label="fragment_jee_dpp_phy"
+        tools:layout="@layout/fragment_jee_books_list" />
+    <fragment
+        android:id="@+id/jeeDppChemFragment"
+        android:name="com.doxx.rankershalt.JeeDppChemFragment"
+        android:label="fragment_jee_dpp_chem"
+        tools:layout="@layout/fragment_jee_books_list" />
+    <fragment
+        android:id="@+id/jeeDppMathsFragment"
+        android:name="com.doxx.rankershalt.JeeDppMathsFragment"
+        android:label="fragment_jee_dpp_maths"
+        tools:layout="@layout/fragment_jee_books_list" />
+    <fragment
+        android:id="@+id/comedkPyqFragment"
+        android:name="com.doxx.rankershalt.ComedkPyqFragment"
+        android:label="fragment_comedk_pyq"
+        tools:layout="@layout/fragment_jee_books_list" />
+    <fragment
+        android:id="@+id/comedkTestPaperFragment"
+        android:name="com.doxx.rankershalt.ComedkTestPaperFragment"
+        android:label="fragment_comedk_test_paper"
+        tools:layout="@layout/fragment_jee_books_list" />
+</navigation>

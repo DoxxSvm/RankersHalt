@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">RankersHalt</string>
+    <string name="a">Hello a</string>
+    <string name="b">Hello b</string>
+    <string name="c">Hello c</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

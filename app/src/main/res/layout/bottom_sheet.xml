@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/shape"
+    android:gravity="center_horizontal"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="5dp"
+        android:background="@drawable/shape2"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="20sp"
+        android:id="@+id/bottomText"
+        android:padding="10dp"
+        android:fontFamily="@font/nunito_sans_light"
+        android:text="Let's study for 10 more minutes...?"
+        android:textColor="@color/black"/>
+
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:orientation="horizontal"
+       android:weightSum="2"
+       android:layout_height="wrap_content">
+       <Button
+           android:layout_width="0dp"
+           android:layout_weight="1"
+           android:textColor="#091947"
+           android:layout_margin="20dp"
+           android:fontFamily="@font/nunito_sans_light"
+           android:backgroundTint="@color/white"
+           android:layout_height="wrap_content"
+           android:id="@+id/leave"
+           android:textAllCaps="false"
+           android:text="Take Rest"/>
+       <androidx.appcompat.widget.AppCompatButton
+           android:backgroundTint="#091947"
+           android:layout_width="0dp"
+           android:layout_weight="1"
+           android:layout_margin="20dp"
+           android:shadowRadius="5"
+           android:fontFamily="@font/nunito_sans_light"
+           android:textColor="@color/white"
+           android:layout_height="wrap_content"
+           android:id="@+id/Continue"
+           android:text="Continue"/>
+   </LinearLayout>
+
+
+
+
+</LinearLayout>
