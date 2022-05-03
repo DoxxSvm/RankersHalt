@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/gradient"
+    tools:context=".HaltFragment">
+    <com.google.android.material.card.MaterialCardView
+
+        android:layout_width="250dp"
+        android:layout_margin="30dp"
+        app:cardCornerRadius="5dp"
+        android:layout_gravity="center"
+        android:layout_height="80dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:src="@drawable/rhlogo2" />
+    </com.google.android.material.card.MaterialCardView>
+    <ScrollView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <com.google.android.material.card.MaterialCardView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+               app:cardElevation="20dp"
+                app:cardBackgroundColor="#FDFDFD"
+                app:cardCornerRadius="15dp"
+                app:strokeColor="@color/black"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Book Request"
+                        android:textColor="#2E2A2A"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="If you want to read any book and it is
+not available on our app,Please submit a request so that we can upload it in our next update."
+                        android:textSize="15sp"
+                        android:fontFamily="@font/nunito_sans_light"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="20dp"/>
+                    <Button
+                        android:id="@+id/haltrequest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_gravity="bottom|right"
+                        android:textSize="10sp"
+                        android:backgroundTint="#E8D7D7"
+                        android:text="Request"
+                        android:textColor="#152033" />
+
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="#FDFDFD"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="20dp"
+                app:strokeColor="@color/black"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Share RankersHalt"
+                        android:textColor="#2E2A2A"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Studying with friends is always fun. Share Rankershalt and let them
+know about this amazing app you using!!!"
+                        android:textSize="15sp"
+                        android:fontFamily="@font/nunito_sans_light"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="20dp"/>
+                    <Button
+                        android:id="@+id/haltshare"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_gravity="bottom|right"
+                        android:textSize="10sp"
+                        android:backgroundTint="#E8D7D7"
+                        android:text="Share"
+                        android:textColor="#152033" />
+
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardElevation="20dp"
+                app:cardBackgroundColor="#FDFDFD"
+                app:cardCornerRadius="15dp"
+                app:strokeColor="@color/black"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Rate us"
+                        android:textColor="#2E2A2A"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="We are working day and night to provide you the best materials
+,if you think our work is appreciable,Let us know"
+                        android:textSize="15sp"
+                        android:fontFamily="@font/nunito_sans_light"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="20dp"/>
+                    <RatingBar
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/haltRating"/>
+
+
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardBackgroundColor="#FDFDFD"
+            app:cardCornerRadius="15dp"
+                app:cardElevation="20dp"
+            app:strokeColor="@color/black"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Want to contribute?"
+                    android:textColor="#2E2A2A"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="If we helped you to improve your rank, Buy me a coffee. Little contribution would be appreciated"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/nunito_sans_light"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"/>
+                <Button
+                    android:id="@+id/haltcontri"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_gravity="bottom|right"
+                    android:textSize="10sp"
+                    android:backgroundTint="#E8D7D7"
+                    android:text="Buy Me a coffee"
+                    android:textColor="#152033" />
+
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

@@ -26,6 +26,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.github.barteksc.pdfviewer.PDFView;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.ismaeldivita.chipnavigation.ChipNavigationBar;
 
 import java.io.BufferedInputStream;
@@ -41,22 +46,31 @@ public class PdfView extends AppCompatActivity {
     private String MyPdf = "";
     private AppCompatSeekBar seekBar;
     private ImageView imageView;
-    private Button button;
+    private Button button,reportBtn;
     private TextView textViewBook;
     private PDFView pdfView;
     private TextView textView;
-    private Boolean flag;
-    TextView total,current;
+    TextView total,current,reportTxt;
+    Boolean flag;
+    private AdView mAdView;
+
     private static final DecimalFormat df = new DecimalFormat("0.00");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pdf_view);
-        Doxx2 doxx = new Doxx2();
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
         flag=false;
-//        ChipNavigationBar chipNavigationBar = findViewById(R.id.bottomNav2);
-//        chipNavigationBar.showBadge(R.id.downloadsFragment);
+        mAdView = findViewById(R.id.pdfViewadView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
+        Doxx2 doxx = new Doxx2();
         doxx.setStatusBarGradiant(this);
         textView=findViewById(R.id.textView);
         textViewBook=findViewById(R.id.PdfViewTitle);
@@ -64,6 +78,8 @@ public class PdfView extends AppCompatActivity {
         imageView=findViewById(R.id.PdfViewImg);
         current=findViewById(R.id.current);
         total=findViewById(R.id.total);
+        reportBtn=findViewById(R.id.report_btn);
+        reportTxt=findViewById(R.id.report_txt);
         link = getIntent().getStringExtra("link");
         //Toast.makeText(this,,Toast.LENGTH_SHORT).show();
         textViewBook.setText(getIntent().getStringExtra("title"));
@@ -97,6 +113,8 @@ public class PdfView extends AppCompatActivity {
         textView.setVisibility(View.VISIBLE);
         current.setVisibility(View.VISIBLE);
         total.setVisibility(View.VISIBLE);
+        reportTxt.setVisibility(View.VISIBLE);
+        reportBtn.setVisibility(View.VISIBLE);
         seekBar.getProgressDrawable().setColorFilter(Color.RED, PorterDuff.Mode.SRC_IN);
         seekBar.getThumb().setColorFilter(Color.RED,PorterDuff.Mode.SRC_IN);
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
@@ -195,14 +213,12 @@ public class PdfView extends AppCompatActivity {
     }
     private void openPdf(String fileName){
         try{
-
-            //File file= getFileStreamPath(fileName);
-            //Log.e("file","file" + file.getAbsolutePath());
             seekBar.setVisibility(View.GONE);
             textView.setVisibility(View.GONE);
+            reportBtn.setVisibility(View.GONE);
+            reportTxt.setVisibility(View.GONE);
             current.setVisibility(View.GONE);
             total.setVisibility(View.GONE);
-            //pdfView.setVisibility(View.VISIBLE);
             Intent intent = new Intent(this,ViewBook.class);
             intent.putExtra("Filename",fileName);
             startActivity(intent);

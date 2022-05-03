@@ -167,7 +167,20 @@
         android:id="@+id/neetMaterialsFragment"
         android:name="com.doxx.rankershalt.NeetMaterialsFragment"
         android:label="fragment_neet_materials"
-        tools:layout="@layout/fragment_neet_materials" />
+        tools:layout="@layout/fragment_neet_materials" >
+        <action
+            android:id="@+id/action_neetMaterialsFragment_to_neetTestPaperFragment"
+            app:destination="@id/neetTestPaperFragment" />
+        <action
+            android:id="@+id/action_neetMaterialsFragment_to_neetPyqFragment"
+            app:destination="@id/neetPyqFragment" />
+        <action
+            android:id="@+id/action_neetMaterialsFragment_to_neetNotesFragment"
+            app:destination="@id/neetNotesFragment" />
+        <action
+            android:id="@+id/action_neetMaterialsFragment_to_neetDPPFragment"
+            app:destination="@id/neetDPPFragment" />
+    </fragment>
     <fragment
         android:id="@+id/comedkMaterialsFragment"
         android:name="com.doxx.rankershalt.ComedkMaterialsFragment"
@@ -332,4 +345,43 @@
         android:name="com.doxx.rankershalt.ComedkTestPaperFragment"
         android:label="fragment_comedk_test_paper"
         tools:layout="@layout/fragment_jee_books_list" />
+    <fragment
+        android:id="@+id/haltFragment"
+        android:name="com.doxx.rankershalt.HaltFragment"
+        android:label="fragment_halt"
+        tools:layout="@layout/fragment_halt" />
+    <fragment
+        android:id="@+id/neetPyqFragment"
+        android:name="com.doxx.rankershalt.NeetPyqFragment"
+        android:label="fragment_neet_pyq"
+        tools:layout="@layout/fragment_neet_pyq" />
+    <fragment
+        android:id="@+id/neetTestPaperFragment"
+        android:name="com.doxx.rankershalt.NeetTestPaperFragment"
+        android:label="fragment_neet_test_paper"
+        tools:layout="@layout/fragment_neet_test_paper" />
+    <fragment
+        android:id="@+id/neetNotesFragment"
+        android:name="com.doxx.rankershalt.NeetNotesFragment"
+        android:label="fragment_neet_notes"
+        tools:layout="@layout/fragment_neet_notes" >
+        <action
+            android:id="@+id/action_neetNotesFragment_to_jeeNotesPhyFragment"
+            app:destination="@id/jeeNotesPhyFragment" />
+        <action
+            android:id="@+id/action_neetNotesFragment_to_jeeNotesChemFragment"
+            app:destination="@id/jeeNotesChemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/neetDPPFragment"
+        android:name="com.doxx.rankershalt.NeetDPPFragment"
+        android:label="fragment_neet_d_p_p"
+        tools:layout="@layout/fragment_neet_d_p_p" >
+        <action
+            android:id="@+id/action_neetDPPFragment_to_jeeDppPhyFragment"
+            app:destination="@id/jeeDppPhyFragment" />
+        <action
+            android:id="@+id/action_neetDPPFragment_to_jeeDppChemFragment"
+            app:destination="@id/jeeDppChemFragment" />
+    </fragment>
 </navigation>

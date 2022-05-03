@@ -31,7 +31,7 @@
         android:background="@drawable/shape"
         android:id="@+id/downloadRv"
         android:layout_width="match_parent"
-        android:layout_height="800dp"
+        android:layout_height="match_parent"
         android:layout_marginStart="1dp"
         android:layout_marginEnd="1dp"
         app:layout_constraintLeft_toLeftOf="parent"

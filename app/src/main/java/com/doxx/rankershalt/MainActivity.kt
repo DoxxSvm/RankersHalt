@@ -18,8 +18,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         var doxx =Doxx()
         doxx.setStatusBarGradiant(this)
-        val jee = findViewById<CardView>(R.id.mainAJee)
-        val neet = findViewById<CardView>(R.id.mainANeet)
         //Toast.makeText(this,filesDir.listFiles().get(0).toString(),Toast.LENGTH_SHORT).show()
 
 

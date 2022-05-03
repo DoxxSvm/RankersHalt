@@ -1,19 +1,14 @@
 package com.doxx.rankershalt
 
-import android.content.Context
-import android.content.Intent
-import android.graphics.drawable.GradientDrawable
-import android.net.Uri
 import android.os.Bundle
-import android.os.Environment
-import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.FileProvider
 import com.github.barteksc.pdfviewer.PDFView
 import com.github.barteksc.pdfviewer.scroll.DefaultScrollHandle
+import com.google.android.gms.ads.*
 import kotlinx.android.synthetic.main.activity_main2.*
-import java.io.File
+import kotlinx.android.synthetic.main.activity_view_book.*
+import kotlinx.android.synthetic.main.fragment_jee_materials.*
 
 
 class ViewBook : AppCompatActivity(){
@@ -25,22 +20,45 @@ class ViewBook : AppCompatActivity(){
         var pdfView = findViewById<PDFView>(R.id.pdfView22)
         val bundle: Bundle? = intent.extras
         var fileName = bundle?.getString("Filename").toString()
-        //bottomNav2.showBadge(R.id.downloadsFragment)
+        loadAds()
+        if(fileName=="null"){
+            pdfView.fromAsset("rh_ptable.pdf")
+                .enableSwipe(true)
+                .swipeHorizontal(false)
+                .enableAntialiasing(true)
+                .spacing(0)
+                .scrollHandle(DefaultScrollHandle(this))
+                .enableAnnotationRendering(true)
+                .load()
+        }
+        else{
+            pdfView.fromFile(getFileStreamPath(fileName))
+                .enableSwipe(true)
+                .swipeHorizontal(false)
+                .enableAntialiasing(true)
+                .spacing(0)
+                .scrollHandle(DefaultScrollHandle(this))
+                .enableAnnotationRendering(true)
+                .load()
 
-        pdfView.fromFile(getFileStreamPath(fileName))
-            .enableSwipe(true)
-            .swipeHorizontal(false)
-            .onError { t: Throwable ->
-                Log.e(
-                    "file",
-                    "file$t"
-                )
+
+        }
+
+
+
+    }
+    fun loadAds(){
+        MobileAds.initialize(this) {}
+
+        val adRequest = AdRequest.Builder().build()
+        ViewBookadView.loadAd(adRequest)
+        ViewBookadView.adListener = object: AdListener() {
+            override fun onAdLoaded() {
+                // Code to be executed when an ad finishes loading.
             }
-            .enableAntialiasing(true)
-            .spacing(0)
-            .scrollHandle(DefaultScrollHandle(this))
-            .enableAnnotationRendering(true)
-            .load()
+        }
+
+
     }
 
 

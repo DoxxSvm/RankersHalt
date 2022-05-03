@@ -45,6 +45,8 @@ dependencies {
     implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
     implementation 'com.google.android.gms:play-services-ads:20.6.0'
     implementation 'com.github.ismaeldivita:chip-navigation-bar:1.4.0'
+    implementation group: 'commons-io', name: 'commons-io', version: '2.4'
+
     def nav_version = "2.4.2"
 
     implementation project(':nativetemplates')

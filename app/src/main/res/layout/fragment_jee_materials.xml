@@ -35,6 +35,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
+                app:cardElevation="20dp"
                 app:cardBackgroundColor="@color/white"
                 app:cardCornerRadius="15dp"
                 app:strokeColor="@color/black"
@@ -74,8 +75,8 @@
                             android:layout_marginBottom="20dp"
                             android:layout_weight="1"
                             app:cardBackgroundColor="@color/white"
-                            app:cardCornerRadius="15dp"
-                            app:cardElevation="10dp">
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="5dp">
 
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -108,8 +109,8 @@
                             android:layout_marginBottom="20dp"
                             android:layout_weight="1"
                             app:cardBackgroundColor="@color/white"
-                            app:cardCornerRadius="15dp"
-                            app:cardElevation="10dp">
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="5dp">
 
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -142,8 +143,8 @@
                             android:layout_marginBottom="20dp"
                             android:layout_weight="1"
                             app:cardBackgroundColor="@color/white"
-                            app:cardCornerRadius="15dp"
-                            app:cardElevation="10dp">
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="5dp">
 
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -185,8 +186,8 @@
                             android:layout_marginBottom="20dp"
                             android:layout_weight="1"
                             app:cardBackgroundColor="@color/white"
-                            app:cardCornerRadius="15dp"
-                            app:cardElevation="10dp">
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="5dp">
 
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -218,8 +219,8 @@
                             android:layout_marginBottom="20dp"
                             android:layout_weight="1"
                             app:cardBackgroundColor="@color/white"
-                            app:cardCornerRadius="15dp"
-                            app:cardElevation="10dp">
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="5dp">
 
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -252,8 +253,8 @@
                             android:layout_marginBottom="20dp"
                             android:layout_weight="1"
                             app:cardBackgroundColor="@color/white"
-                            app:cardCornerRadius="15dp"
-                            app:cardElevation="10dp">
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="5dp">
 
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -285,6 +286,7 @@
                 android:layout_margin="10dp"
                 app:cardBackgroundColor="@color/white"
                 app:cardCornerRadius="15dp"
+                app:cardElevation="20dp"
                 app:strokeColor="@color/black"
                 app:strokeWidth="1dp">
 
@@ -321,7 +323,7 @@
                                 android:layout_marginLeft="10dp"
                                 android:fontFamily="@font/nunito_sans_light"
                                 android:gravity="center"
-
+                                android:id="@+id/jamt"
                                 android:text="Jee Advanced Mock Test 2022"
                                 android:textColor="#12063C"
                                 android:textSize="15sp" />
@@ -346,6 +348,7 @@
                                 android:layout_marginLeft="10dp"
                                 android:fontFamily="@font/nunito_sans_light"
                                 android:gravity="center"
+                                android:id="@+id/jmmt"
                                 android:text="Jee Main Mock Test 2022"
                                 android:textColor="#12063C"
                                 android:textSize="15sp" />
@@ -369,6 +372,7 @@
                                 android:layout_marginLeft="10dp"
                                 android:fontFamily="@font/nunito_sans_light"
                                 android:gravity="center"
+                                android:id="@+id/japyq"
                                 android:text="Jee Advanced Previous Year Questions[Solved]"
                                 android:textColor="#12063C"
                                 android:textSize="15sp" />
@@ -392,6 +396,7 @@
                                 android:layout_marginLeft="10dp"
                                 android:fontFamily="@font/nunito_sans_light"
                                 android:gravity="center"
+                                android:id="@+id/jmpyq"
                                 android:text="Jee Main Previous Year Questions[Solved]"
                                 android:textColor="#12063C"
                                 android:textSize="15sp" />

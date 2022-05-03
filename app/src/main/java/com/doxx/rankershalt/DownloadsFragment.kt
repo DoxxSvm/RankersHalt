@@ -3,11 +3,11 @@ package com.doxx.rankershalt
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.fragment_downloads.*
+import org.apache.commons.io.comparator.LastModifiedFileComparator
 import java.util.*
 
 
@@ -18,6 +18,7 @@ class DownloadsFragment : Fragment(R.layout.fragment_downloads),ItemClickedDownl
         downloadRv.layoutManager = LinearLayoutManager(context)
         books= arrayListOf()
         var files= requireActivity().filesDir.listFiles()
+        Arrays.sort(files, LastModifiedFileComparator.LASTMODIFIED_REVERSE);
         if(files.size>0){
             for(i in 0..(files.size-1) ){
                 var name = files[i].toString()
@@ -36,8 +37,6 @@ class DownloadsFragment : Fragment(R.layout.fragment_downloads),ItemClickedDownl
 
 
         downloadsSearchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
-
-
             override fun onQueryTextChange(p0: String?): Boolean {
                 val search = p0!!.lowercase(Locale.getDefault())
                 val filter = ArrayList<String>()

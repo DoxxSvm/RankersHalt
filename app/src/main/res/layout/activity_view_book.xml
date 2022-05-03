@@ -1,14 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".ViewBook">
 
     <com.github.barteksc.pdfviewer.PDFView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+       app:layout_constraintBottom_toTopOf="@id/ViewBookadView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         android:id="@+id/pdfView22"/>
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/ViewBookadView"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        ads:layout_constraintTop_toBottomOf="@id/pdfView22"
+        ads:layout_constraintBottom_toBottomOf="parent"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/Banner_ad_unit">
+    </com.google.android.gms.ads.AdView>
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

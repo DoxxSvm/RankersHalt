@@ -7,9 +7,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/app_logo"
+        android:icon="@mipmap/app_logo_new"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/app_logo_round"
+        android:roundIcon="@mipmap/app_logo_new_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RankersHalt">
         <activity
@@ -27,7 +27,7 @@
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-3940256099942544~3347511713" />
+            android:value="ca-app-pub-2985582773868656~7511910894" />
 
         <activity
             android:name=".ViewBook"

@@ -12,18 +12,18 @@
         android:layout_width="match_parent"
         android:orientation="vertical"
         android:background="@drawable/shape"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
         <TextView
             android:id="@+id/PdfViewTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:textColor="@color/black"
-            android:textSize="30sp"
-            android:text="Headng"
+            android:textSize="20sp"
+            android:fontFamily="@font/nunito_sans_light"
+            android:text="Arihant Trigonometry "
             android:padding="20dp"/>
         <androidx.cardview.widget.CardView
-            android:layout_margin="20dp"
             android:layout_gravity="center"
             android:layout_width="200dp"
             android:layout_height="300dp"
@@ -34,9 +34,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:scaleType="centerCrop"
-                android:src="@drawable/maths"/>
+                android:src="@drawable/syll"/>
 
         </androidx.cardview.widget.CardView>
+        <com.google.android.gms.ads.AdView
+            android:layout_gravity="center_horizontal"
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/pdfViewadView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            ads:adSize="LARGE_BANNER"
+            ads:adUnitId="@string/Banner_ad_unit">
+        </com.google.android.gms.ads.AdView>
         <Button
             android:id="@+id/PdfViewDownload"
             android:layout_width="wrap_content"
@@ -88,12 +97,32 @@
             android:id="@+id/textView"
             android:textSize="15sp"
             android:textStyle="bold"/>
-<!--        <com.github.barteksc.pdfviewer.PDFView-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="match_parent"-->
-<!--            android:id="@+id/pdfView"-->
-<!--            android:visibility="gone"/>-->
+
+
 
     </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/report_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:visibility="gone"
+        android:layout_marginRight="10dp"
+        android:text="Link not working?"/>
+        <Button
+            android:id="@+id/report_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:visibility="gone"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="bottom|right"
+            android:textSize="10sp"
+            android:backgroundTint="#E8D7D7"
+            android:text="Report"
+            android:textColor="#152033" />
+
+
 
 </LinearLayout>

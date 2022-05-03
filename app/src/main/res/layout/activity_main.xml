@@ -20,17 +20,20 @@
         android:text="Start your preparation today"
         android:textSize="10sp" />
 
-
     <com.google.android.material.card.MaterialCardView
 
-        android:layout_width="wrap_content"
-        android:layout_margin="40dp"
+        android:layout_width="250dp"
+        android:layout_margin="30dp"
         app:cardCornerRadius="5dp"
-        android:layout_height="75dp">
+        android:layout_centerHorizontal="true"
+        android:layout_height="80dp">
+
         <ImageView
+
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/rhlogo"/>
+            android:background="@color/white"
+            android:src="@drawable/rhlogo2" />
 
     </com.google.android.material.card.MaterialCardView>
 
@@ -40,7 +43,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         >
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

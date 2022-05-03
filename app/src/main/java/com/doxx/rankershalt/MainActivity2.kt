@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.view.Window
 import android.view.WindowManager
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.content.ContextCompat
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
@@ -21,9 +22,6 @@ class MainActivity2 : AppCompatActivity() {
         StatusBarColor.setStatusBarGradiant(this)
         bottomNav2.setOnItemSelectedListener {
                 itemId -> bottomNav.selectedItemId = itemId
-            if(itemId == R.id.downloadsFragment){
-                bottomNav2.dismissBadge(itemId)
-            }
         }
         val navHomeFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         val navController  = navHomeFragment.navController
