@@ -14,18 +14,18 @@ class HaltFragment : Fragment(R.layout.fragment_halt) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         haltshare.setOnClickListener {
-            var whatsappIntent = Intent(Intent.ACTION_SEND)
-            whatsappIntent.setType("text/plain")
-            whatsappIntent.setPackage("com.whatsapp")
-            whatsappIntent.putExtra(Intent.EXTRA_TEXT, "The text you wanted to share")
-            try {
-                startActivity(whatsappIntent)
-            } catch (ex: ActivityNotFoundException){
-                Toast.makeText(context,"Unable to Share",Toast.LENGTH_SHORT).show()
-            }
+            val intent= Intent()
+            intent.action=Intent.ACTION_SEND
+            intent.putExtra(Intent.EXTRA_TEXT,"Hey! improve your rank using this amazing app " +
+                    "https://play.google.com/store/apps/details?id=com.doxx.rankershalt")
+            intent.type="text/plain"
+            startActivity(Intent.createChooser(intent,"Share To:"))
         }
         haltRating.setOnClickListener{
-            Toast.makeText(context,"Coming Soon",Toast.LENGTH_SHORT).show()
+            val uri = Uri.parse("market://details?id=com.doxx.rankershalt")
+            val myAppLinkToMarket = Intent(Intent.ACTION_VIEW, uri)
+            startActivity(myAppLinkToMarket)
+            Toast.makeText(context, "Hii", Toast.LENGTH_SHORT).show()
         }
         haltrequest.setOnClickListener {
             val emailIntent = Intent(Intent.ACTION_SENDTO).apply {

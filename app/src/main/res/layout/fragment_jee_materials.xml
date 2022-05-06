@@ -324,7 +324,7 @@
                                 android:fontFamily="@font/nunito_sans_light"
                                 android:gravity="center"
                                 android:id="@+id/jamt"
-                                android:text="Jee Advanced Mock Test 2022"
+                                android:text="Jee Advanced Mock Test 2022 [42 Sets]"
                                 android:textColor="#12063C"
                                 android:textSize="15sp" />
                         </LinearLayout>
@@ -349,7 +349,7 @@
                                 android:fontFamily="@font/nunito_sans_light"
                                 android:gravity="center"
                                 android:id="@+id/jmmt"
-                                android:text="Jee Main Mock Test 2022"
+                                android:text="Jee Main Mock Test 2022 [42 Sets]"
                                 android:textColor="#12063C"
                                 android:textSize="15sp" />
                         </LinearLayout>
@@ -373,7 +373,7 @@
                                 android:fontFamily="@font/nunito_sans_light"
                                 android:gravity="center"
                                 android:id="@+id/japyq"
-                                android:text="Jee Advanced Previous Year Questions[Solved]"
+                                android:text="Jee Advanced Previous Year Questions"
                                 android:textColor="#12063C"
                                 android:textSize="15sp" />
                         </LinearLayout>
@@ -397,7 +397,7 @@
                                 android:fontFamily="@font/nunito_sans_light"
                                 android:gravity="center"
                                 android:id="@+id/jmpyq"
-                                android:text="Jee Main Previous Year Questions[Solved]"
+                                android:text="Jee Main Previous Year Questions"
                                 android:textColor="#12063C"
                                 android:textSize="15sp" />
                         </LinearLayout>

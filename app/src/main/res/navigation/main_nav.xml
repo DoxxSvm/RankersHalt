@@ -71,6 +71,21 @@
         <action
             android:id="@+id/action_homeFragment2_to_vitMaterialsFragment"
             app:destination="@id/vitMaterialsFragment" />
+        <action
+            android:id="@+id/action_homeFragment2_to_formulaSheetFragment"
+            app:destination="@id/formulaSheetFragment" />
+        <action
+            android:id="@+id/action_homeFragment2_to_handBookFragment"
+            app:destination="@id/handBookFragment" />
+        <action
+            android:id="@+id/action_homeFragment2_to_crashCourseFragment"
+            app:destination="@id/crashCourseFragment" />
+        <action
+            android:id="@+id/action_homeFragment2_to_ncertFragment"
+            app:destination="@id/ncertFragment" />
+        <action
+            android:id="@+id/action_homeFragment2_to_revisionFragment"
+            app:destination="@id/revisionFragment" />
     </fragment>
     <fragment
         android:id="@+id/jeeBooksFragment"
@@ -140,29 +155,17 @@
         android:id="@+id/jeeNotesPhyFragment"
         android:name="com.doxx.rankershalt.JeeNotesPhyFragment"
         android:label="fragment_jee_notes_phy"
-        tools:layout="@layout/fragment_jee_books_list">
-        <argument
-            android:name="heading"
-            app:argType="string" />
-    </fragment>
+        tools:layout="@layout/fragment_jee_books_list"/>
     <fragment
         android:id="@+id/jeeNotesChemFragment"
         android:name="com.doxx.rankershalt.JeeNotesChemFragment"
         android:label="fragment_jee_notes_chem"
-        tools:layout="@layout/fragment_jee_books_list">
-        <argument
-            android:name="heading"
-            app:argType="string" />
-    </fragment>
+        tools:layout="@layout/fragment_jee_books_list"/>
     <fragment
         android:id="@+id/jeeNotesMathsFragment"
         android:name="com.doxx.rankershalt.JeeNotesMathsFragment"
         android:label="fragment_jee_notes_maths"
-        tools:layout="@layout/fragment_jee_books_list">
-        <argument
-            android:name="heading"
-            app:argType="string" />
-    </fragment>
+        tools:layout="@layout/fragment_jee_books_list"/>
     <fragment
         android:id="@+id/neetMaterialsFragment"
         android:name="com.doxx.rankershalt.NeetMaterialsFragment"
@@ -180,6 +183,9 @@
         <action
             android:id="@+id/action_neetMaterialsFragment_to_neetDPPFragment"
             app:destination="@id/neetDPPFragment" />
+        <action
+            android:id="@+id/action_neetMaterialsFragment_to_neetBooksFragment"
+            app:destination="@id/neetBooksFragment" />
     </fragment>
     <fragment
         android:id="@+id/comedkMaterialsFragment"
@@ -371,6 +377,9 @@
         <action
             android:id="@+id/action_neetNotesFragment_to_jeeNotesChemFragment"
             app:destination="@id/jeeNotesChemFragment" />
+        <action
+            android:id="@+id/action_neetNotesFragment_to_neetNotesBioFragment"
+            app:destination="@id/neetNotesBioFragment" />
     </fragment>
     <fragment
         android:id="@+id/neetDPPFragment"
@@ -383,5 +392,90 @@
         <action
             android:id="@+id/action_neetDPPFragment_to_jeeDppChemFragment"
             app:destination="@id/jeeDppChemFragment" />
+        <action
+            android:id="@+id/action_neetDPPFragment_to_neetDppBioFragment"
+            app:destination="@id/neetDppBioFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/neetNotesBioFragment"
+        android:name="com.doxx.rankershalt.NeetNotesBioFragment"
+        android:label="fragment_neet_notes_bio"
+        tools:layout="@layout/fragment_jee_books_list" />
+    <fragment
+        android:id="@+id/neetDppBioFragment"
+        android:name="com.doxx.rankershalt.NeetDppBioFragment"
+        android:label="fragment_neet_dpp_bio"
+        tools:layout="@layout/fragment_jee_books_list" />
+    <fragment
+        android:id="@+id/neetBooksFragment"
+        android:name="com.doxx.rankershalt.NeetBooksFragment"
+        android:label="fragment_neet_books"
+        tools:layout="@layout/fragment_neet_books" >
+        <action
+            android:id="@+id/action_neetBooksFragment_to_neetBooksBioFragment"
+            app:destination="@id/neetBooksBioFragment" />
+        <action
+            android:id="@+id/action_neetBooksFragment_to_neetBooksPhyFragment"
+            app:destination="@id/neetBooksPhyFragment" />
+        <action
+            android:id="@+id/action_neetBooksFragment_to_neetBooksChemFragment"
+            app:destination="@id/neetBooksChemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/neetBooksBioFragment"
+        android:name="com.doxx.rankershalt.NeetBooksBioFragment"
+        android:label="fragment_neet_books_bio"
+        tools:layout="@layout/fragment_jee_books_list" />
+    <fragment
+        android:id="@+id/neetBooksPhyFragment"
+        android:name="com.doxx.rankershalt.NeetBooksPhyFragment"
+        android:label="fragment_neet_books_phy"
+        tools:layout="@layout/fragment_jee_books_list" />
+    <fragment
+        android:id="@+id/neetBooksChemFragment"
+        android:name="com.doxx.rankershalt.NeetBooksChemFragment"
+        android:label="fragment_neet_books_chem"
+        tools:layout="@layout/fragment_jee_books_list"/>
+    <fragment
+        android:id="@+id/formulaSheetFragment"
+        android:name="com.doxx.rankershalt.FormulaSheetFragment"
+        android:label="fragment_formula_sheet"
+        tools:layout="@layout/fragment_jee_books_list" />
+    <fragment
+        android:id="@+id/handBookFragment"
+        android:name="com.doxx.rankershalt.HandBookFragment"
+        android:label="fragment_hand_book"
+        tools:layout="@layout/fragment_jee_books_list" />
+    <fragment
+        android:id="@+id/crashCourseFragment"
+        android:name="com.doxx.rankershalt.CrashCourseFragment"
+        android:label="fragment_crash_course"
+        tools:layout="@layout/fragment_jee_books_list" />
+    <fragment
+        android:id="@+id/ncertFragment"
+        android:name="com.doxx.rankershalt.NcertFragment"
+        android:label="fragment_ncert"
+        tools:layout="@layout/fragment_ncert" >
+        <action
+            android:id="@+id/action_ncertFragment_to_ncertChemFragment"
+            app:destination="@id/ncertChemFragment" />
+        <action
+            android:id="@+id/action_ncertFragment_to_ncertBioFragment"
+            app:destination="@id/ncertBioFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ncertChemFragment"
+        android:name="com.doxx.rankershalt.NcertChemFragment"
+        android:label="fragment_ncert_chem"
+        tools:layout="@layout/fragment_jee_books_list" />
+    <fragment
+        android:id="@+id/ncertBioFragment"
+        android:name="com.doxx.rankershalt.NcertBioFragment"
+        android:label="fragment_ncert_bio"
+        tools:layout="@layout/fragment_jee_books_list" />
+    <fragment
+        android:id="@+id/revisionFragment"
+        android:name="com.doxx.rankershalt.RevisionFragment"
+        android:label="fragment_revision"
+        tools:layout="@layout/fragment_jee_books_list" />
 </navigation>

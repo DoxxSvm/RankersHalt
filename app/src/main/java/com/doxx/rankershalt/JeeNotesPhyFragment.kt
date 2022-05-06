@@ -2,66 +2,86 @@ package com.doxx.rankershalt
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.google.android.gms.ads.*
 import kotlinx.android.synthetic.main.fragment_jee_books_list.*
 import java.util.*
 
-
-class JeeNotesPhyFragment: Fragment(R.layout.fragment_jee_books_list),ItemClicked2 {
-    lateinit var adapter:TestAdapter
+class JeeNotesPhyFragment: Fragment(R.layout.fragment_jee_books_list),ItemClicked {
+    lateinit var adapter:Adapter
     lateinit var imageId:Array<Int>
     lateinit var bookName:Array<String>
     lateinit var links:Array<String>
-    lateinit var bookArrayList: ArrayList<Any>
+    lateinit var bookArrayList: ArrayList<Books>
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         ecy.layoutManager= LinearLayoutManager(context)
 
         bookName= arrayOf(
-            "Electric charges and fields DPP",
-            "Electrostatic potential and capacitance DPP",
-            "Current electricity DPP",
-            "Moving charges and magnetism DPP",
-            "Magnetism and matter DPP",
-            "Electromagnetic induction DPP",
-            "Alternating current DPP",
-            "Electromagnetic waves Ray optics and optical instrument DPP",
-            "Wave optics DPP",
-            "Dual nature of radiation and matter DPP",
-            "Atoms DPP",
-            "Nuclei DPP",
-            "Semiconductor electronics DPP"
+            "Alternatng Current Handwritten Notes",
+            "Basic Trigonometry Handwritten Notes",
+            "Calorimetry Handwritten Notes",
+            "Capacitor Handwritten Notes",
+            "Current Electricity Handwritten Notes",
+            "Differentiation and Integration Handwritten Notes",
+            "Electric Potential Handwritten Notes",
+            "Electrostatics Handwritten Notes",
+            "EM Waves Handwritten Notes",
+            "EMI Handwritten Notes",
+            "Gaseous State Handwritten Notes",
+            "Graph Practicle Handwritten Notes",
+            "Kinematics Handwritten Notes",
+            "Kinetic Theory of Gases Handwritten Notes",
+            "Magnetism Handwritten Notes",
+            "Mode of Heat Transfer Handwritten Notes",
+            "Motion Handwritten Notes",
+            "Newton Laws of Motion Handwritten Notes",
+            "Projectile Motion Handwritten Notes",
+            "Ray Optics Handwritten Notes",
+            "Refraction of Light Handwritten Notes",
+            "Theory of Gases Handwritten Notes",
+            "Thermodynamics Handwritten Notes",
+            "Unit and Measurement Handwritten Notes",
+            "Vectors Handwritten Notes",
+            "Wave Optics Handwritten Notes"
         )
         links= arrayOf(
-            "https://drive.google.com/uc?export=download&id=1banrOQ2rAWyplXqEOmVPJmcbiYDRsAbQ",
-            "https://drive.google.com/uc?export=download&id=1iJfygSZUs7rfRuLBKLVXvcGFvP2sZvk2",
-            "https://drive.google.com/uc?export=download&id=1MCbyS4QhGYeyY7HELd-KS_fd2nggsdHE",
-            "https://drive.google.com/uc?export=download&id=1-auHzO9Ch23OJLQ0OxmHjX8NfxiK8ZnX",
-            "https://drive.google.com/uc?export=download&id=1nVPT-Xb9t4R9siInGf_n50up6Oz0Jipt",
-            "https://drive.google.com/uc?export=download&id=1r2cdKK_DsFjX4R4zl0uz1DY7RhXq6qEX",
-            "https://drive.google.com/uc?export=download&id=1YCi3oPcUGA9WUHNx15uaWlHMx5j246wX",
-            "https://drive.google.com/uc?export=download&id=1Ok0vwUYza_MSk86oiTkzi7HtVOuErybm",
-            "https://drive.google.com/uc?export=download&id=15wSwqAR4MIIfTdxJmUl-kbM4q_-ZFTL3",
-            "https://drive.google.com/uc?export=download&id=1jp-S4PLYQX4973EXHjgkyGZW5PFqYBke",
-            "https://drive.google.com/uc?export=download&id=1ivCFhiuDeNjdwdYN0CI01YAvneA7TpCu",
-            "https://drive.google.com/uc?export=download&id=1K47dWHbk1-yPWQHzpJ3QNj5C2lnEulPP",
-            "https://drive.google.com/uc?export=download&id=1rkIc8-4OhAAIG0gwyv1FBYjcs8f_sNkt",
-            "https://drive.google.com/uc?export=download&id=11xcr-8JAGvycnzXUh-U_8TWdyMh4BC-X"
+            "https://drive.google.com/uc?export=download&id=1ZXn4u9Lz1I1Iap0GdcrvCxyoYvcDUSOJ",
+            "https://drive.google.com/uc?export=download&id=1We6wzRiLNbXEm44-Cyo76DIZKEOwbVzZ",
+            "https://drive.google.com/uc?export=download&id=18KLJ9GhHcYI2IFX43H5ZfkiJW1P6oi9s",
+            "https://drive.google.com/uc?export=download&id=1KyZYLk9qMclkQnpflp46B9ZG1X8UjSho",
+            "https://drive.google.com/uc?export=download&id=19tBbSEkTYCzodpwPQ2C6Rj1O5_djY-yP",
+            "https://drive.google.com/uc?export=download&id=1u-790MME4t-zZcMyULgMLuv5hRwWpCf4",
+            "https://drive.google.com/uc?export=download&id=1k1ohEpY_wy_NpDGYHs8YdMbQlZicBx36",
+            "https://drive.google.com/uc?export=download&id=1YTjckQZ7h0HEA1pMQBDPnqV3hfN_qizd",
+            "https://drive.google.com/uc?export=download&id=1VLABBcZHiwIM_IZy6tKpW6EyoyK9j4yj",
+            "https://drive.google.com/uc?export=download&id=1TtnEgI2Ty8QJB1bzvxlIu6fZV_nw0ggL",
+            "https://drive.google.com/uc?export=download&id=1gsn4GBDaZhpEd6Hh0nQDO8V105j94sMT",
+            "https://drive.google.com/uc?export=download&id=1IbMRB7EL7VsKliL2omSkNmHdViXBhXxL",
+            "https://drive.google.com/uc?export=download&id=1kCNDSTRTNnyipRpAh38DMQRYMC8SYYnj",
+            "https://drive.google.com/uc?export=download&id=16K8mPS7hkYrVqsGY2OEdMZoZ9Eus-CVG",
+            "https://drive.google.com/uc?export=download&id=1i9ayO0CSe_bUWcFoo4XVii_5-R5TrH5D",
+            "https://drive.google.com/uc?export=download&id=1T94yCD3ha0jQ3Q4D06OPgruvZflOmYa5",
+            "https://drive.google.com/uc?export=download&id=1DHQh99aufCO2cZEjQ4dN4qYZLUo7Nb5J",
+            "https://drive.google.com/uc?export=download&id=11RDyBIgQ8yfT_x3aB-aqj7GEfKH0Wmi0",
+            "https://drive.google.com/uc?export=download&id=1xZjzei7q26EdYnUcV6UBwuiK28MZG0od",
+            "https://drive.google.com/uc?export=download&id=1ojYuxFVSYsUfK1lCwCuz0neiJ0Z-Fshu",
+            "https://drive.google.com/uc?export=download&id=1guEsZbC4Uk9KdC-nsFZAd_Q7kmehH_en",
+            "https://drive.google.com/uc?export=download&id=1Gw_-kXXknzI93USDw2zYrpRMkx7nTSbZ",
+            "https://drive.google.com/uc?export=download&id=168smeletsJrf5DJTfjLIs5oR3NjWJkcT",
+            "https://drive.google.com/uc?export=download&id=1hArkHHH2JvaB6QeP5sNjlX32ssQa6Ljn",
+            "https://drive.google.com/uc?export=download&id=1P6DcnKSv-upwQu4wFZnvzNipArN5Soph",
+            "https://drive.google.com/uc?export=download&id=1ddT5DJAjn6stPtfIiMuXwEJljkxrm2Qc"
 
         )
         bookArrayList= arrayListOf()
         fetchData()
-        addBannerAds()
-        loadBannerAds()
-        var temp = ArrayList<Any>()
+        var temp = ArrayList<Books>()
         temp.addAll(bookArrayList)
-        adapter= TestAdapter(context,bookArrayList,this)
+        adapter= Adapter(bookArrayList,this)
         ecy.adapter=adapter
         bookListSearchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
 
@@ -69,7 +89,7 @@ class JeeNotesPhyFragment: Fragment(R.layout.fragment_jee_books_list),ItemClicke
             override fun onQueryTextChange(p0: String?): Boolean {
                 val search = p0!!.lowercase(Locale.getDefault())
                 if(search.isNotEmpty()){
-                    var filter = ArrayList<Any>()
+                    var filter = ArrayList<Books>()
                     bookArrayList.forEach{
                         if(it is Books){
                             if(it.bookName.lowercase().contains(search)){
@@ -88,7 +108,7 @@ class JeeNotesPhyFragment: Fragment(R.layout.fragment_jee_books_list),ItemClicke
             }
             override fun onQueryTextSubmit(p0: String?): Boolean {
                 val search = p0!!.lowercase(Locale.getDefault())
-                var filter = ArrayList<Any>()
+                var filter = ArrayList<Books>()
                 bookArrayList.forEach{
                     if(it is Books){
                         if(it.bookName.lowercase().contains(search)){
@@ -102,16 +122,6 @@ class JeeNotesPhyFragment: Fragment(R.layout.fragment_jee_books_list),ItemClicke
             }
         })
     }
-    private fun addBannerAds() {
-        var i = 0
-        while (i <= bookArrayList.size) {
-            val adView = AdView(context)
-            adView.adSize = AdSize.BANNER
-            adView.adUnitId = getString(R.string.Banner_ad_unit)
-            bookArrayList.add(i, adView)
-            i += ITEMS_PER_AD
-        }
-    }
     fun fetchData(){
         for(i in bookName.indices){
             val book = Books(bookName[i],links[i])
@@ -119,90 +129,13 @@ class JeeNotesPhyFragment: Fragment(R.layout.fragment_jee_books_list),ItemClicke
         }
     }
 
-    override fun onClick(item: Any) {
-        if(item is Books){
-            val intent = Intent(context,PdfView::class.java)
-            intent.putExtra("title",item.bookName)
-            intent.putExtra("link",item.link)
-            startActivity(intent)
-        }
+    override fun onClick(item: Books) {
 
-    }
-    companion object{
-        const val ITEMS_PER_AD = 5
+        val intent = Intent(context,Downloader::class.java)
+        intent.putExtra("title",item.bookName)
+        intent.putExtra("link",item.link)
+        startActivity(intent)
 
-    }
 
-    private fun loadBannerAd(index: Int) {
-        if (index >= bookArrayList.size) {
-            return
-        }
-        val item: Any = bookArrayList[index] as? AdView
-            ?: throw ClassCastException(
-                "Expected item at index " + index + " to be a banner ad"
-                        + " ad."
-            )
-        val adView = item as AdView
-
-        // Set an AdListener on the AdView to wait for the previous banner ad
-        // to finish loading before loading the next ad in the items list.
-        adView.adListener = object : AdListener() {
-            override fun onAdLoaded() {
-                super.onAdLoaded()
-                // The previous banner ad loaded successfully, call this method again to
-                // load the next ad in the items list.
-                loadBannerAd(index + ITEMS_PER_AD)
-            }
-
-            override fun onAdFailedToLoad(loadAdError: LoadAdError) {
-                // The previous banner ad failed to load. Call this method again to load
-                // the next ad in the items list.
-                val error = String.format(
-                    "domain: %s, code: %d, message: %s",
-                    loadAdError.domain, loadAdError.code, loadAdError.message
-                )
-                Log.e(
-                    "MainActivity",
-                    "The previous banner ad failed to load with error: "
-                            + error
-                            + ". Attempting to"
-                            + " load the next banner ad in the items list."
-                )
-                loadBannerAd(index + ITEMS_PER_AD)
-            }
-        }
-        // Load the banner ad.
-        adView.loadAd(AdRequest.Builder().build())
-    }
-    private fun loadBannerAds() {
-        // Load the first banner ad in the items list (subsequent ads will be loaded automatically
-        // in sequence).
-        loadBannerAd(5)
-    }
-    override fun onResume() {
-        for (item in bookArrayList) {
-            if (item is AdView) {
-                item.resume()
-            }
-        }
-        super.onResume()
-    }
-
-    override fun onPause() {
-        for (item in bookArrayList) {
-            if (item is AdView) {
-                item.pause()
-            }
-        }
-        super.onPause()
-    }
-
-    override fun onDestroy() {
-        for (item in bookArrayList) {
-            if (item is AdView) {
-                item.destroy()
-            }
-        }
-        super.onDestroy()
     }
 }

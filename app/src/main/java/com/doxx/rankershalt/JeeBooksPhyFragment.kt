@@ -2,22 +2,19 @@ package com.doxx.rankershalt
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.google.android.gms.ads.*
 import kotlinx.android.synthetic.main.fragment_jee_books_list.*
 import java.util.*
 
-
-class JeeBooksPhyFragment: Fragment(R.layout.fragment_jee_books_list),ItemClicked2 {
-    lateinit var adapter:TestAdapter
+class JeeBooksPhyFragment: Fragment(R.layout.fragment_jee_books_list),ItemClicked {
+    lateinit var adapter:Adapter
     lateinit var imageId:Array<Int>
     lateinit var bookName:Array<String>
     lateinit var links:Array<String>
-    lateinit var bookArrayList: ArrayList<Any>
+    lateinit var bookArrayList: ArrayList<Books>
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -25,7 +22,7 @@ class JeeBooksPhyFragment: Fragment(R.layout.fragment_jee_books_list),ItemClicke
 
         bookName= arrayOf(
             "Arihant JEE Mains Physics in 40 days",
-            "Arihant Physics 41 years JEE Mains and Advanced",
+            "Arihant Physics 41 years JEE Main and Advanced",
             "DC Pandey Electricity and Magnetism",
             "DC Pandey Mechanics Volume 1",
             "DC Pandey Mechanics Volume 2",
@@ -36,7 +33,7 @@ class JeeBooksPhyFragment: Fragment(R.layout.fragment_jee_books_list),ItemClicke
             "Concept of Physics HC Verma Volume 2"
         )
         links= arrayOf(
-            "https://drive.google.com/uc?export=download&id=1_1uxcpSENN63ST7Rcnx5WINOvnlpF3O5",
+            "https://drive.google.com/utc?d=1_1uxcpSENN63ST7Rcnx5WINOvnlpF3O5&export=download",
             "https://drive.google.com/uc?export=download&id=1tlUgqTk-m62tEPbaOIzG9i7Z4v1959EW",
             "https://drive.google.com/uc?export=download&id=19j3RXKKL4g4gp7fkGID3uufyqq0vHJrM",
             "https://drive.google.com/uc?export=download&id=1olzusP6d8uib5jYvQBoGO2SV4YMiwrzX",
@@ -49,11 +46,9 @@ class JeeBooksPhyFragment: Fragment(R.layout.fragment_jee_books_list),ItemClicke
         )
         bookArrayList= arrayListOf()
         fetchData()
-        addBannerAds()
-        loadBannerAds()
-        var temp = ArrayList<Any>()
+        var temp = ArrayList<Books>()
         temp.addAll(bookArrayList)
-        adapter= TestAdapter(context,bookArrayList,this)
+        adapter= Adapter(bookArrayList,this)
         ecy.adapter=adapter
         bookListSearchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
 
@@ -61,7 +56,7 @@ class JeeBooksPhyFragment: Fragment(R.layout.fragment_jee_books_list),ItemClicke
             override fun onQueryTextChange(p0: String?): Boolean {
                 val search = p0!!.lowercase(Locale.getDefault())
                 if(search.isNotEmpty()){
-                    var filter = ArrayList<Any>()
+                    var filter = ArrayList<Books>()
                     bookArrayList.forEach{
                         if(it is Books){
                             if(it.bookName.lowercase().contains(search)){
@@ -80,7 +75,7 @@ class JeeBooksPhyFragment: Fragment(R.layout.fragment_jee_books_list),ItemClicke
             }
             override fun onQueryTextSubmit(p0: String?): Boolean {
                 val search = p0!!.lowercase(Locale.getDefault())
-                var filter = ArrayList<Any>()
+                var filter = ArrayList<Books>()
                 bookArrayList.forEach{
                     if(it is Books){
                         if(it.bookName.lowercase().contains(search)){
@@ -94,16 +89,6 @@ class JeeBooksPhyFragment: Fragment(R.layout.fragment_jee_books_list),ItemClicke
             }
         })
     }
-    private fun addBannerAds() {
-        var i = 0
-        while (i <= bookArrayList.size) {
-            val adView = AdView(context)
-            adView.adSize = AdSize.BANNER
-            adView.adUnitId = getString(R.string.Banner_ad_unit)
-            bookArrayList.add(i, adView)
-            i += ITEMS_PER_AD
-        }
-    }
     fun fetchData(){
         for(i in bookName.indices){
             val book = Books(bookName[i],links[i])
@@ -111,90 +96,13 @@ class JeeBooksPhyFragment: Fragment(R.layout.fragment_jee_books_list),ItemClicke
         }
     }
 
-    override fun onClick(item: Any) {
-        if(item is Books){
-            val intent = Intent(context,PdfView::class.java)
-            intent.putExtra("title",item.bookName)
-            intent.putExtra("link",item.link)
-            startActivity(intent)
-        }
+    override fun onClick(item: Books) {
 
-    }
-    companion object{
-        const val ITEMS_PER_AD = 5
+        val intent = Intent(context,Downloader::class.java)
+        intent.putExtra("title",item.bookName)
+        intent.putExtra("link",item.link)
+        startActivity(intent)
 
-    }
 
-    private fun loadBannerAd(index: Int) {
-        if (index >= bookArrayList.size) {
-            return
-        }
-        val item: Any = bookArrayList[index] as? AdView
-            ?: throw ClassCastException(
-                "Expected item at index " + index + " to be a banner ad"
-                        + " ad."
-            )
-        val adView = item as AdView
-
-        // Set an AdListener on the AdView to wait for the previous banner ad
-        // to finish loading before loading the next ad in the items list.
-        adView.adListener = object : AdListener() {
-            override fun onAdLoaded() {
-                super.onAdLoaded()
-                // The previous banner ad loaded successfully, call this method again to
-                // load the next ad in the items list.
-                loadBannerAd(index + ITEMS_PER_AD)
-            }
-
-            override fun onAdFailedToLoad(loadAdError: LoadAdError) {
-                // The previous banner ad failed to load. Call this method again to load
-                // the next ad in the items list.
-                val error = String.format(
-                    "domain: %s, code: %d, message: %s",
-                    loadAdError.domain, loadAdError.code, loadAdError.message
-                )
-                Log.e(
-                    "MainActivity",
-                    "The previous banner ad failed to load with error: "
-                            + error
-                            + ". Attempting to"
-                            + " load the next banner ad in the items list."
-                )
-                loadBannerAd(index + ITEMS_PER_AD)
-            }
-        }
-        // Load the banner ad.
-        adView.loadAd(AdRequest.Builder().build())
-    }
-    private fun loadBannerAds() {
-        // Load the first banner ad in the items list (subsequent ads will be loaded automatically
-        // in sequence).
-        loadBannerAd(5)
-    }
-    override fun onResume() {
-        for (item in bookArrayList) {
-            if (item is AdView) {
-                item.resume()
-            }
-        }
-        super.onResume()
-    }
-
-    override fun onPause() {
-        for (item in bookArrayList) {
-            if (item is AdView) {
-                item.pause()
-            }
-        }
-        super.onPause()
-    }
-
-    override fun onDestroy() {
-        for (item in bookArrayList) {
-            if (item is AdView) {
-                item.destroy()
-            }
-        }
-        super.onDestroy()
     }
 }

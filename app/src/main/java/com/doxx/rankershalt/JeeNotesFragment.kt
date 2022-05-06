@@ -13,13 +13,13 @@ class JeeNotesFragment : Fragment(R.layout.fragment_jee_notes) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         JeeNotesChem.setOnClickListener {
-            findNavController().navigate(JeeNotesFragmentDirections.actionJeeNotesFragmentToJeeNotesChemFragment("Chemistry Notes"))
+            findNavController().navigate(JeeNotesFragmentDirections.actionJeeNotesFragmentToJeeNotesChemFragment())
         }
         JeeNotesMaths.setOnClickListener {
-            findNavController().navigate(JeeNotesFragmentDirections.actionJeeNotesFragmentToJeeNotesMathsFragment("Maths Notes"))
+            findNavController().navigate(JeeNotesFragmentDirections.actionJeeNotesFragmentToJeeNotesMathsFragment())
         }
         JeeNotesPhy.setOnClickListener {
-            findNavController().navigate(JeeNotesFragmentDirections.actionJeeNotesFragmentToJeeNotesPhyFragment("Physics Notes"))
+            findNavController().navigate(JeeNotesFragmentDirections.actionJeeNotesFragmentToJeeNotesPhyFragment())
         }
 
     }

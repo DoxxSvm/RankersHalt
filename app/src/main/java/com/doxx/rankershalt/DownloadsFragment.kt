@@ -3,6 +3,7 @@ package com.doxx.rankershalt
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -13,6 +14,7 @@ import java.util.*
 
 class DownloadsFragment : Fragment(R.layout.fragment_downloads),ItemClickedDownloads {
     lateinit var books :ArrayList<String>
+    lateinit var adapter: DownloadsAdapter
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         downloadRv.layoutManager = LinearLayoutManager(context)
@@ -32,7 +34,7 @@ class DownloadsFragment : Fragment(R.layout.fragment_downloads),ItemClickedDownl
             requireActivity().downloadFlag.visibility = View.VISIBLE
         }
         var temp = ArrayList(books)
-        var adapter = DownloadsAdapter(books,this)
+        adapter = DownloadsAdapter(books,this)
         downloadRv.adapter=adapter
 
 
@@ -77,4 +79,22 @@ class DownloadsFragment : Fragment(R.layout.fragment_downloads),ItemClickedDownl
         intent.putExtra("Filename", item)
         startActivity(intent)
     }
+
+    override fun onDelClick(position: Int) {
+        val book = books[position]
+        var files= requireActivity().filesDir.listFiles()
+        for(i in 0..(files.size-1) ){
+            var name = files[i].toString()
+            if(name.contains(book)){
+                files[i].delete()
+                books.remove(book)
+                Toast.makeText(context, book +" deleted successfully", Toast.LENGTH_SHORT).show()
+                break
+            }
+        }
+        adapter.items=books
+        adapter.notifyDataSetChanged()
+    }
+
+
 }

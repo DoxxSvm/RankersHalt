@@ -13,8 +13,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RankersHalt">
         <activity
+            android:name=".Downloader"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity2"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -27,7 +30,7 @@
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-2985582773868656~7511910894" />
+            android:value="ca-app-pub-3940256099942544~3347511713" />
 
         <activity
             android:name=".ViewBook"

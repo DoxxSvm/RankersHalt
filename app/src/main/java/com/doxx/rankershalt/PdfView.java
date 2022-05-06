@@ -37,6 +37,7 @@ import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
+import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
 import java.text.DecimalFormat;
@@ -98,14 +99,7 @@ public class PdfView extends AppCompatActivity {
 
 
     }
-
-    @Override
-    public void onBackPressed() {
-        if(flag==false) super.onBackPressed();
-        else{
-            Toast.makeText(this,"PLease wait",Toast.LENGTH_SHORT).show();
-        }
-    }
+    
 
     private void initSeekbar(){
         seekBar=findViewById(R.id.seekbar);
@@ -176,7 +170,7 @@ public class PdfView extends AppCompatActivity {
                         FileOutputStream fileOutputStream =openFileOutput(fileName, Context.MODE_PRIVATE);
                         URL url = new URL(link);
                         Log.d("Mydoxx",url.toString());
-                        URLConnection urlConnection = url.openConnection();
+                        HttpURLConnection urlConnection = (HttpURLConnection)url.openConnection();
 
                         urlConnection.connect();
 
@@ -189,6 +183,10 @@ public class PdfView extends AppCompatActivity {
                         long total = 0;
                         int count;
                         while((count=inputStream.read(data))!=-1) {
+                            if (isCancelled()) {
+                                inputStream.close();
+                                return false;
+                            }
                             total += count;
                             publishProgress(((int) ((total * 100) / contentLen)),(int)total,(int)contentLen);
                             fileOutputStream.write(data, 0, count);
@@ -197,6 +195,7 @@ public class PdfView extends AppCompatActivity {
                         fileOutputStream.flush();
                         fileOutputStream.close();
                         inputStream.close();
+                        urlConnection.disconnect();
                         return  true;
                     }
                     catch (Exception e){

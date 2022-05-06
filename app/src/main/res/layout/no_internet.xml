@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No Internet"
+        android:fontFamily="@font/nunito_sans_light"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:layout_gravity="center" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:fontFamily="@font/nunito_sans_light"
+        android:text="Please Turn ON your internet connection and try again"
+        android:textSize="13sp"
+        android:layout_gravity="center" />
+    <Button
+        android:id="@+id/tryagain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Try again"
+        android:layout_gravity="center"
+        android:backgroundTint="#E8D7D7"
+        android:textColor="#152033"/>
+
+</LinearLayout>

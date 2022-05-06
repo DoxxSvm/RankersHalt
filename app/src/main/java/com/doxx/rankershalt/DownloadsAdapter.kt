@@ -3,8 +3,10 @@ package com.doxx.rankershalt
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.main.item_downloads.view.*
 
 class DownloadsAdapter(var items: ArrayList<String>,private val listener : ItemClickedDownloads): RecyclerView.Adapter<ViewHolderDownloads>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolderDownloads {
@@ -13,6 +15,9 @@ class DownloadsAdapter(var items: ArrayList<String>,private val listener : ItemC
 
         view.setOnClickListener{
             listener.onClick(items.get(viewHol.adapterPosition))
+        }
+        view.delete.setOnClickListener{
+            listener.onDelClick(viewHol.adapterPosition)
         }
         return viewHol
 
@@ -30,8 +35,10 @@ class DownloadsAdapter(var items: ArrayList<String>,private val listener : ItemC
 
 }
 class ViewHolderDownloads (itemView: View) : RecyclerView.ViewHolder(itemView){
-    val title = itemView.findViewById<TextView>(R.id.DownloadedBook)
+    val title: TextView = itemView.findViewById<TextView>(R.id.DownloadedBook)
+    val delete = itemView.findViewById<ImageView>(R.id.delete)
 }
 interface ItemClickedDownloads{
     fun onClick(item: String)
+    fun onDelClick(position: Int)
 }

@@ -10,7 +10,6 @@
 
 
     <TextView
-        android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -21,8 +20,9 @@
     <androidx.appcompat.widget.SearchView
         android:layout_width="wrap_content"
         android:padding="10dp"
+        style="@style/SearchViewStyle"
         android:id="@+id/downloadsSearchView"
-        android:layout_height="50dp"/>
+        android:layout_height="65dp"/>
 
 
 
@@ -45,7 +45,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/shape"
-        android:paddingTop="200dp"
+        android:paddingTop="100dp"
+        android:fontFamily="@font/nunito_sans_light"
         android:gravity="center"
         android:text="No downloaded Books"
         android:textSize="20sp"/>

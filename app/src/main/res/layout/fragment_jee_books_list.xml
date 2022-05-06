@@ -15,7 +15,8 @@
         android:layout_width="wrap_content"
         android:padding="10dp"
         android:id="@+id/bookListSearchView"
-        android:layout_height="50dp"/>
+        style="@style/SearchViewStyle"
+        android:layout_height="65dp"/>
 
 
 

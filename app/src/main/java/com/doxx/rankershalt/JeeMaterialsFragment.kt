@@ -34,6 +34,18 @@ class JeeMaterialsFragment : Fragment(R.layout.fragment_jee_materials) {
             fJeeMaterialsdpp.setOnClickListener {
                 findNavController().navigate(JeeMaterialsFragmentDirections.actionJeeMaterialsFragmentToJeeDppFragment())
             }
+            jamt.setOnClickListener {
+                findNavController().navigate(JeeMaterialsFragmentDirections.actionJeeMaterialsFragmentToJeeTestPaperFragment())
+            }
+            jmmt.setOnClickListener {
+                findNavController().navigate(JeeMaterialsFragmentDirections.actionJeeMaterialsFragmentToJeeTestPaperFragment())
+            }
+            japyq.setOnClickListener {
+                findNavController().navigate(JeeMaterialsFragmentDirections.actionJeeMaterialsFragmentToJeePyqFragment())
+            }
+            jmpyq.setOnClickListener {
+                findNavController().navigate(JeeMaterialsFragmentDirections.actionJeeMaterialsFragmentToJeePyqFragment())
+            }
             //loadAds()
         }
     }
@@ -49,26 +61,10 @@ class JeeMaterialsFragment : Fragment(R.layout.fragment_jee_materials) {
                 Toast.makeText(context,"Ad loaded", Toast.LENGTH_SHORT).show()
             }
 
-            override fun onAdFailedToLoad(adError : LoadAdError) {
-                // Code to be executed when an ad request fails.
+            override fun onAdFailedToLoad(adError : LoadAdError) {// Code to be executed when an ad request fails.
             }
 
-            override fun onAdOpened() {
-                // Code to be executed when an ad opens an overlay that
-                // covers the screen.
-            }
-
-            override fun onAdClicked() {
-                // Code to be executed when the user clicks on an ad.
-            }
-
-            override fun onAdClosed() {
-                // Code to be executed when the user is about to return
-                // to the app after tapping on an ad.
-            }
         }
-
-
     }
 
 

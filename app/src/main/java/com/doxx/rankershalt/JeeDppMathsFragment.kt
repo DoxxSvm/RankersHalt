@@ -2,22 +2,19 @@ package com.doxx.rankershalt
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.google.android.gms.ads.*
 import kotlinx.android.synthetic.main.fragment_jee_books_list.*
 import java.util.*
 
-
-class JeeDppMathsFragment: Fragment(R.layout.fragment_jee_books_list),ItemClicked2 {
-    lateinit var adapter:TestAdapter
+class JeeDppMathsFragment: Fragment(R.layout.fragment_jee_books_list),ItemClicked {
+    lateinit var adapter:Adapter
     lateinit var imageId:Array<Int>
     lateinit var bookName:Array<String>
     lateinit var links:Array<String>
-    lateinit var bookArrayList: ArrayList<Any>
+    lateinit var bookArrayList: ArrayList<Books>
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -32,9 +29,25 @@ class JeeDppMathsFragment: Fragment(R.layout.fragment_jee_books_list),ItemClicke
             "Application of Derivatives DPP",
             "Integrals DPP",
             "Application of integrals DPP",
-            "Differential equations Vector DPP", "algebra DPP",
+            "Differential equations Vector DPP",
+            "algebra DPP",
             "3-D Geometry DPP",
             "Linear programming DPP",
+            "Probability DPP",
+            "Sets DPP",
+            "Relations and Functions DPP",
+            "Trigonometric Functions DPP",
+            "Principle of Mathametical Induction DPP",
+            "Complex Numbers and Quadratic Equation DPP",
+            "Linear Inequalities DPP",
+            "Permutations and Combiantion DPP",
+            "Binomial Theorem DPP",
+            "Sequence and Series DPP",
+            "Straight Lines and Pair of Straight Lines DPP",
+            "Conic Section DPP",
+            "Limits and Derivatives DPP",
+            "Mathematical Reasoning DPP",
+            "Statistics DPP",
             "Probability DPP"
         )
         links= arrayOf(
@@ -50,16 +63,30 @@ class JeeDppMathsFragment: Fragment(R.layout.fragment_jee_books_list),ItemClicke
             "https://drive.google.com/uc?export=download&id=1nR1qPTRC_G40rwg1WVf_sYGGIKUFsQn-",
             "https://drive.google.com/uc?export=download&id=1D4UXVayljdzCqPpWJ25oDkOpjL2xDzwB",
             "https://drive.google.com/uc?export=download&id=1ZylQ5sX-593Fkj8oqigkTA_6EizU9rTp",
-            "https://drive.google.com/uc?export=download&id=1vQxaEnejl72mcnOA9j_Usg9SKnj7Ovcm"
+            "https://drive.google.com/uc?export=download&id=1vQxaEnejl72mcnOA9j_Usg9SKnj7Ovcm",
+            "https://drive.google.com/uc?export=download&id=19a7DempPM-bcPLRTy3dSouHzw8hE0_-k",
+            "https://drive.google.com/uc?export=download&id=1dsRa3l-jZjbjcSBellpLQpL2xF5890cV",
+            "https://drive.google.com/uc?export=download&id=1nEhW2s7jJNTSAOhIZ1jqyg9oDkRNPQ9o",
+            "https://drive.google.com/uc?export=download&id=1Rya16uUbCboC7aYbNRlPaGm-f_A3pKFh",
+            "https://drive.google.com/uc?export=download&id=19Zp7zbZbZ8aTKb9kYvzcCgpDYnDmapqa",
+            "https://drive.google.com/uc?export=download&id=1iJfHN_U1dTLkZjpLoAPkZpXZKrDhYzQz",
+            "https://drive.google.com/uc?export=download&id=1PfYqPQHHF2E8h8ddsvkIeNBlIz580oxM",
+            "https://drive.google.com/uc?export=download&id=1fAHPSEPdK809NZDoKT9Iv6T9HzYScuYk",
+            "https://drive.google.com/uc?export=download&id=1v-JtSSXAZqCB3UatEm5t0KvbOw5A8r9I",
+            "https://drive.google.com/uc?export=download&id=1jo55bxJMRuEUz1cJxHJMLu85SyxbZPok",
+            "https://drive.google.com/uc?export=download&id=1FMHxQKbauQgu93MF50jE--LRtz_vdlan",
+            "https://drive.google.com/uc?export=download&id=1ImHbjgp1OpDqLMi7QdN91mPeXvk3KvrZ",
+            "https://drive.google.com/uc?export=download&id=1aNeMHrdQqTXGMbBlKlsr_D2DqfxQkang",
+            "https://drive.google.com/uc?export=download&id=1J_dc4JIjtZRGoyGQlLqZKd4rq7hpURlv",
+            "https://drive.google.com/uc?export=download&id=1dADRjt7O9NnSh1zJngdNd76RU-v4VICx"
+
 
         )
         bookArrayList= arrayListOf()
         fetchData()
-        addBannerAds()
-        loadBannerAds()
-        var temp = ArrayList<Any>()
+        var temp = ArrayList<Books>()
         temp.addAll(bookArrayList)
-        adapter= TestAdapter(context,bookArrayList,this)
+        adapter= Adapter(bookArrayList,this)
         ecy.adapter=adapter
         bookListSearchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
 
@@ -67,7 +94,7 @@ class JeeDppMathsFragment: Fragment(R.layout.fragment_jee_books_list),ItemClicke
             override fun onQueryTextChange(p0: String?): Boolean {
                 val search = p0!!.lowercase(Locale.getDefault())
                 if(search.isNotEmpty()){
-                    var filter = ArrayList<Any>()
+                    var filter = ArrayList<Books>()
                     bookArrayList.forEach{
                         if(it is Books){
                             if(it.bookName.lowercase().contains(search)){
@@ -86,7 +113,7 @@ class JeeDppMathsFragment: Fragment(R.layout.fragment_jee_books_list),ItemClicke
             }
             override fun onQueryTextSubmit(p0: String?): Boolean {
                 val search = p0!!.lowercase(Locale.getDefault())
-                var filter = ArrayList<Any>()
+                var filter = ArrayList<Books>()
                 bookArrayList.forEach{
                     if(it is Books){
                         if(it.bookName.lowercase().contains(search)){
@@ -100,16 +127,6 @@ class JeeDppMathsFragment: Fragment(R.layout.fragment_jee_books_list),ItemClicke
             }
         })
     }
-    private fun addBannerAds() {
-        var i = 0
-        while (i <= bookArrayList.size) {
-            val adView = AdView(context)
-            adView.adSize = AdSize.BANNER
-            adView.adUnitId = getString(R.string.Banner_ad_unit)
-            bookArrayList.add(i, adView)
-            i += ITEMS_PER_AD
-        }
-    }
     fun fetchData(){
         for(i in bookName.indices){
             val book = Books(bookName[i],links[i])
@@ -117,90 +134,13 @@ class JeeDppMathsFragment: Fragment(R.layout.fragment_jee_books_list),ItemClicke
         }
     }
 
-    override fun onClick(item: Any) {
-        if(item is Books){
-            val intent = Intent(context,PdfView::class.java)
-            intent.putExtra("title",item.bookName)
-            intent.putExtra("link",item.link)
-            startActivity(intent)
-        }
+    override fun onClick(item: Books) {
 
-    }
-    companion object{
-        const val ITEMS_PER_AD = 5
+        val intent = Intent(context,Downloader::class.java)
+        intent.putExtra("title",item.bookName)
+        intent.putExtra("link",item.link)
+        startActivity(intent)
 
-    }
 
-    private fun loadBannerAd(index: Int) {
-        if (index >= bookArrayList.size) {
-            return
-        }
-        val item: Any = bookArrayList[index] as? AdView
-            ?: throw ClassCastException(
-                "Expected item at index " + index + " to be a banner ad"
-                        + " ad."
-            )
-        val adView = item as AdView
-
-        // Set an AdListener on the AdView to wait for the previous banner ad
-        // to finish loading before loading the next ad in the items list.
-        adView.adListener = object : AdListener() {
-            override fun onAdLoaded() {
-                super.onAdLoaded()
-                // The previous banner ad loaded successfully, call this method again to
-                // load the next ad in the items list.
-                loadBannerAd(index + ITEMS_PER_AD)
-            }
-
-            override fun onAdFailedToLoad(loadAdError: LoadAdError) {
-                // The previous banner ad failed to load. Call this method again to load
-                // the next ad in the items list.
-                val error = String.format(
-                    "domain: %s, code: %d, message: %s",
-                    loadAdError.domain, loadAdError.code, loadAdError.message
-                )
-                Log.e(
-                    "MainActivity",
-                    "The previous banner ad failed to load with error: "
-                            + error
-                            + ". Attempting to"
-                            + " load the next banner ad in the items list."
-                )
-                loadBannerAd(index + ITEMS_PER_AD)
-            }
-        }
-        // Load the banner ad.
-        adView.loadAd(AdRequest.Builder().build())
-    }
-    private fun loadBannerAds() {
-        // Load the first banner ad in the items list (subsequent ads will be loaded automatically
-        // in sequence).
-        loadBannerAd(5)
-    }
-    override fun onResume() {
-        for (item in bookArrayList) {
-            if (item is AdView) {
-                item.resume()
-            }
-        }
-        super.onResume()
-    }
-
-    override fun onPause() {
-        for (item in bookArrayList) {
-            if (item is AdView) {
-                item.pause()
-            }
-        }
-        super.onPause()
-    }
-
-    override fun onDestroy() {
-        for (item in bookArrayList) {
-            if (item is AdView) {
-                item.destroy()
-            }
-        }
-        super.onDestroy()
     }
 }

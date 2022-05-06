@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".Downloader">
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/shape"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/DownloaderTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:fontFamily="@font/nunito_sans_light"
+            android:text="Arihant Trigonometry "
+            android:padding="20dp"/>
+        <androidx.cardview.widget.CardView
+            android:layout_gravity="center"
+            android:layout_width="200dp"
+            android:layout_height="300dp"
+            app:cardCornerRadius="20dp"
+            >
+            <ImageView
+                android:id="@+id/PdfViewImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@drawable/syll"/>
+
+        </androidx.cardview.widget.CardView>
+        <com.google.android.gms.ads.AdView
+            android:layout_gravity="center_horizontal"
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/downloaderadView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            ads:adSize="LARGE_BANNER"
+            ads:adUnitId="@string/Banner_ad_unit">
+        </com.google.android.gms.ads.AdView>
+        <Button
+            android:id="@+id/buttonDownload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Download"
+            android:backgroundTint="@color/black"
+            android:textColor="@color/white"/>
+
+
+
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/report_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="10dp"
+        android:text="Link not working?"/>
+    <Button
+        android:id="@+id/report_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="bottom|right"
+        android:textSize="10sp"
+        android:backgroundTint="#E8D7D7"
+        android:text="Report"
+        android:textColor="#152033" />
+
+
+
+</LinearLayout>

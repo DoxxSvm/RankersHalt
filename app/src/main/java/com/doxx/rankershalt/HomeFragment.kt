@@ -1,15 +1,25 @@
 package com.doxx.rankershalt
 
+import android.app.Dialog
+import android.content.Context
 import android.content.Intent
+import android.content.Intent.getIntent
+import android.net.ConnectivityManager
+import android.net.NetworkCapabilities
 import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import android.view.View
+import android.view.Window
+import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import kotlinx.android.synthetic.main.bottom_sheet.*
 import kotlinx.android.synthetic.main.fragment_home2.*
+import kotlinx.android.synthetic.main.no_internet.*
 
 
 class HomeFragment : Fragment(R.layout.fragment_home2) {
@@ -22,9 +32,9 @@ class HomeFragment : Fragment(R.layout.fragment_home2) {
             findNavController().navigate(action)
         }
         fhomeNeet.setOnClickListener {
-//            val action = HomeFragmentDirections.actionHomeFragment2ToNeetMaterialsFragment()
-//            findNavController().navigate(action)
-            Toast.makeText(context,"Coming Soon",Toast.LENGTH_SHORT).show()
+            val action = HomeFragmentDirections.actionHomeFragment2ToNeetMaterialsFragment()
+            findNavController().navigate(action)
+
         }
         fhomecomedk.setOnClickListener {
             val action = HomeFragmentDirections.actionHomeFragment2ToComedkMaterialsFragment()
@@ -43,16 +53,33 @@ class HomeFragment : Fragment(R.layout.fragment_home2) {
             findNavController().navigate(action)
 
         }
-        fhomerequest.setOnClickListener {
-            val emailIntent = Intent(Intent.ACTION_SENDTO).apply {
-                data = Uri.parse("mailto:support@rankershalt.com")
-            }
-            startActivity(Intent.createChooser(emailIntent, "Send Request"))
+        fhomeshare.setOnClickListener {
+                val intent= Intent()
+                intent.action=Intent.ACTION_SEND
+                intent.putExtra(Intent.EXTRA_TEXT,"Hey! improve your rank using this amazing app " +
+                        "https://play.google.com/store/apps/details?id=com.doxx.rankershalt")
+                intent.type="text/plain"
+                startActivity(Intent.createChooser(intent,"Share To:"))
 
         }
         fhomeperiodic.setOnClickListener {
             val intent= Intent(context, ViewBook::class.java)
             startActivity(intent)
+        }
+        fhomeNcert.setOnClickListener {
+            findNavController().navigate(HomeFragmentDirections.actionHomeFragment2ToNcertFragment())
+        }
+        fhomefsheet.setOnClickListener {
+            findNavController().navigate(HomeFragmentDirections.actionHomeFragment2ToFormulaSheetFragment())
+        }
+        fhomerevision.setOnClickListener {
+            findNavController().navigate(HomeFragmentDirections.actionHomeFragment2ToRevisionFragment())
+        }
+        fhomehandbook.setOnClickListener {
+            findNavController().navigate(HomeFragmentDirections.actionHomeFragment2ToHandBookFragment())
+        }
+        fhomeccourse.setOnClickListener {
+            findNavController().navigate(HomeFragmentDirections.actionHomeFragment2ToCrashCourseFragment())
         }
         requireActivity()
             .onBackPressedDispatcher
@@ -63,6 +90,7 @@ class HomeFragment : Fragment(R.layout.fragment_home2) {
             }
             )
     }
+
 
 
 }

@@ -2,46 +2,67 @@ package com.doxx.rankershalt
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.google.android.gms.ads.*
 import kotlinx.android.synthetic.main.fragment_jee_books_list.*
 import java.util.*
 
-
-class BitsatTestPaperFragment: Fragment(R.layout.fragment_jee_books_list),ItemClicked2 {
-    lateinit var adapter:TestAdapter
+class BitsatTestPaperFragment: Fragment(R.layout.fragment_jee_books_list),ItemClicked {
+    lateinit var adapter:Adapter
     lateinit var imageId:Array<Int>
     lateinit var bookName:Array<String>
     lateinit var links:Array<String>
-    lateinit var bookArrayList: ArrayList<Any>
+    lateinit var bookArrayList: ArrayList<Books>
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         ecy.layoutManager= LinearLayoutManager(context)
 
         bookName= arrayOf(
-            "BITSAT 2005 Question Paper with solution",
-            "BITSAT 2006 Question Paper with solution",
-            "BITSAT 2007 Question Paper with solution",
-            "BITSAT 2008 Question Paper with solution",
+            "BITSAT Test Paper 01",
+            "BITSAT Test Paper 02",
+            "BITSAT Test Paper 03",
+            "BITSAT Test Paper 04",
+            "BITSAT Test Paper 05",
+            "BITSAT Test Paper 06",
+            "BITSAT Test Paper 07",
+            "BITSAT Test Paper 08",
+            "BITSAT Test Paper 09",
+            "BITSAT Test Paper 10",
+            "BITSAT Test Paper 11",
+            "BITSAT Test Paper 12",
+            "BITSAT Test Paper 13",
+            "BITSAT Test Paper 14",
+            "BITSAT Test Paper 15",
+            "BITSAT Test Paper 16",
+            "BITSAT Test Paper 17"
         )
         links= arrayOf(
-            "https://drive.google.com/uc?export=download&id=1AE9H2NEVWMLBsCeRqVQQiuVNXuSe3dNb",
-            "https://drive.google.com/uc?export=download&id=16_XpEPYkeV3ObO3Vqh6BF7oJMYB1MOkX",
-            "https://drive.google.com/uc?export=download&id=1_L0c74I38lKt4uv_D4JSBM630YPHtupg",
-            "https://drive.google.com/uc?export=download&id=1TVA_LhxHWdaSI8uQJxZuoBD4nw4NvPBY",
-            )
+            "https://drive.google.com/uc?export=download&id=1AKTDcAvJIGpvPaR0LKINtSt7qVz-N_Mk",
+            "https://drive.google.com/uc?export=download&id=1DH_LWI8YXaybG0z-5dfpLoOVgJfBZycX",
+            "https://drive.google.com/uc?export=download&id=1Nt9AiWxUUm7CGGOAwJRgOiD8JGMP0zV_",
+            "https://drive.google.com/uc?export=download&id=1xBqSRoxPG-N8rxnMiy9kWXXn0aRAnc1m",
+            "https://drive.google.com/uc?export=download&id=1ohy1-tj3wG7sVog2VXhJGRP2AZIjAeoe",
+            "https://drive.google.com/uc?export=download&id=1N_weSrPwC3rAfNg8zjv3crdhNhAAwnJC",
+            "https://drive.google.com/uc?export=download&id=1ySBZZ4N_Smu0QMIhgMI7voSxMnwy9ldJ",
+            "https://drive.google.com/uc?export=download&id=1hZX-ieZbhPdfuPZilrMB6O-o3VIsVuju",
+            "https://drive.google.com/uc?export=download&id=18kwTEEFoa-yD7FvoJd5RJMhE53LtDC8-",
+            "https://drive.google.com/uc?export=download&id=13hKUqTkGsBHTrSeEZWvmwyoRbUV5UQgz",
+            "https://drive.google.com/uc?export=download&id=18lh_D56RsKfdnwde4n3H0CA2TK15HsxZ",
+            "https://drive.google.com/uc?export=download&id=1n6LEyRRqNpL8hCTKJUnfp9Z9jYQmVKWi",
+            "https://drive.google.com/uc?export=download&id=16jwTujJw3kJZsuhoryWtTWTSUwopXi8c",
+            "https://drive.google.com/uc?export=download&id=1ARQ-C2ZaxBZ7ZsTvOfYpPGBo429fMUjB",
+            "https://drive.google.com/uc?export=download&id=18vyhTM1_oI21WV2ZOaXP9kOYXXHYNBfY",
+            "https://drive.google.com/uc?export=download&id=1IaQs0shDsIu_W9nIBoghwhdoHocmQvau",
+            "https://drive.google.com/uc?export=download&id=1w-xcNKMqxXaF6vAI37zDxJHVTotEGLkG"
+        )
         bookArrayList= arrayListOf()
         fetchData()
-        addBannerAds()
-        loadBannerAds()
-        var temp = ArrayList<Any>()
+        var temp = ArrayList<Books>()
         temp.addAll(bookArrayList)
-        adapter= TestAdapter(context,bookArrayList,this)
+        adapter= Adapter(bookArrayList,this)
         ecy.adapter=adapter
         bookListSearchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
 
@@ -49,7 +70,7 @@ class BitsatTestPaperFragment: Fragment(R.layout.fragment_jee_books_list),ItemCl
             override fun onQueryTextChange(p0: String?): Boolean {
                 val search = p0!!.lowercase(Locale.getDefault())
                 if(search.isNotEmpty()){
-                    var filter = ArrayList<Any>()
+                    var filter = ArrayList<Books>()
                     bookArrayList.forEach{
                         if(it is Books){
                             if(it.bookName.lowercase().contains(search)){
@@ -68,7 +89,7 @@ class BitsatTestPaperFragment: Fragment(R.layout.fragment_jee_books_list),ItemCl
             }
             override fun onQueryTextSubmit(p0: String?): Boolean {
                 val search = p0!!.lowercase(Locale.getDefault())
-                var filter = ArrayList<Any>()
+                var filter = ArrayList<Books>()
                 bookArrayList.forEach{
                     if(it is Books){
                         if(it.bookName.lowercase().contains(search)){
@@ -82,16 +103,6 @@ class BitsatTestPaperFragment: Fragment(R.layout.fragment_jee_books_list),ItemCl
             }
         })
     }
-    private fun addBannerAds() {
-        var i = 0
-        while (i <= bookArrayList.size) {
-            val adView = AdView(context)
-            adView.adSize = AdSize.BANNER
-            adView.adUnitId = getString(R.string.Banner_ad_unit)
-            bookArrayList.add(i, adView)
-            i += ITEMS_PER_AD
-        }
-    }
     fun fetchData(){
         for(i in bookName.indices){
             val book = Books(bookName[i],links[i])
@@ -99,90 +110,13 @@ class BitsatTestPaperFragment: Fragment(R.layout.fragment_jee_books_list),ItemCl
         }
     }
 
-    override fun onClick(item: Any) {
-        if(item is Books){
-            val intent = Intent(context,PdfView::class.java)
-            intent.putExtra("title",item.bookName)
-            intent.putExtra("link",item.link)
-            startActivity(intent)
-        }
+    override fun onClick(item: Books) {
 
-    }
-    companion object{
-        const val ITEMS_PER_AD = 5
+        val intent = Intent(context,Downloader::class.java)
+        intent.putExtra("title",item.bookName)
+        intent.putExtra("link",item.link)
+        startActivity(intent)
 
-    }
 
-    private fun loadBannerAd(index: Int) {
-        if (index >= bookArrayList.size) {
-            return
-        }
-        val item: Any = bookArrayList[index] as? AdView
-            ?: throw ClassCastException(
-                "Expected item at index " + index + " to be a banner ad"
-                        + " ad."
-            )
-        val adView = item as AdView
-
-        // Set an AdListener on the AdView to wait for the previous banner ad
-        // to finish loading before loading the next ad in the items list.
-        adView.adListener = object : AdListener() {
-            override fun onAdLoaded() {
-                super.onAdLoaded()
-                // The previous banner ad loaded successfully, call this method again to
-                // load the next ad in the items list.
-                loadBannerAd(index + ITEMS_PER_AD)
-            }
-
-            override fun onAdFailedToLoad(loadAdError: LoadAdError) {
-                // The previous banner ad failed to load. Call this method again to load
-                // the next ad in the items list.
-                val error = String.format(
-                    "domain: %s, code: %d, message: %s",
-                    loadAdError.domain, loadAdError.code, loadAdError.message
-                )
-                Log.e(
-                    "MainActivity",
-                    "The previous banner ad failed to load with error: "
-                            + error
-                            + ". Attempting to"
-                            + " load the next banner ad in the items list."
-                )
-                loadBannerAd(index + ITEMS_PER_AD)
-            }
-        }
-        // Load the banner ad.
-        adView.loadAd(AdRequest.Builder().build())
-    }
-    private fun loadBannerAds() {
-        // Load the first banner ad in the items list (subsequent ads will be loaded automatically
-        // in sequence).
-        loadBannerAd(5)
-    }
-    override fun onResume() {
-        for (item in bookArrayList) {
-            if (item is AdView) {
-                item.resume()
-            }
-        }
-        super.onResume()
-    }
-
-    override fun onPause() {
-        for (item in bookArrayList) {
-            if (item is AdView) {
-                item.pause()
-            }
-        }
-        super.onPause()
-    }
-
-    override fun onDestroy() {
-        for (item in bookArrayList) {
-            if (item is AdView) {
-                item.destroy()
-            }
-        }
-        super.onDestroy()
     }
 }
