@@ -11,7 +11,6 @@ import java.util.*
 
 class JeeBooksMathsFragment: Fragment(R.layout.fragment_jee_books_list),ItemClicked {
     lateinit var adapter:Adapter
-    lateinit var imageId:Array<Int>
     lateinit var bookName:Array<String>
     lateinit var links:Array<String>
     lateinit var bookArrayList: ArrayList<Books>
@@ -21,6 +20,8 @@ class JeeBooksMathsFragment: Fragment(R.layout.fragment_jee_books_list),ItemClic
         ecy.layoutManager= LinearLayoutManager(context)
 
         bookName= arrayOf(
+            "Arihant Mathematics 41 Years JEE Main and Advanced",
+            "Arihant JEE Main MATHEMATICS 40 Days Crash Course",
             "Arihant Differential Calculus",
             "Arihant Integral Calculus",
             "Arihant Play With Graphs",
@@ -30,6 +31,8 @@ class JeeBooksMathsFragment: Fragment(R.layout.fragment_jee_books_list),ItemClic
             "Arihant Coordinate Geometry"
         )
         links= arrayOf(
+            "https://drive.google.com/uc?id=16_GDiYLiCe6L9LHZvVHgs6AkJbhFS_y-&export=download",
+            "https://drive.google.com/uc?export=download&id=1APOK0W5A_vrE3IkEGQLK3lKPYQdEmkF-",
             "https://drive.google.com/uc?id=1-9Ot9890laYQJG6XKncWC4WTY4yGwnQN&export=download",
             "https://drive.google.com/uc?id=1KH4dgVnkrOz1achVss296hHdvZ_uZ7ly&export=download",
             "https://drive.google.com/uc?id=1j2gZlEkFCDWgXrZpeAdaTRuT8tY46jO-&export=download",

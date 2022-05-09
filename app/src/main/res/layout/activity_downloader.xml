@@ -70,7 +70,7 @@
         android:layout_marginRight="10dp"
         android:text="Link not working?"/>
     <Button
-        android:id="@+id/report_btn"
+        android:id="@+id/downloader_report_btn"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_marginRight="10dp"

@@ -21,31 +21,49 @@ class NeetTestPaperFragment: Fragment(R.layout.fragment_jee_books_list),ItemClic
         ecy.layoutManager= LinearLayoutManager(context)
 
         bookName= arrayOf(
-            "NEET 2021 Question Paper with Solution",
-            "NEET 2020 Question Paper with Solution",
-            "NEET 2019 Question Paper with Solution",
-            "NEET 2018 Question Paper with Solution",
-            "NEET 2017 Question Paper with Solution",
-            "NEET 2016 Question Paper with Solution",
-            "NEET (AIPMT) 2016 Question Paper with Solution",
-            "NEET 2015 Question Paper with Solution",
-            "NEET (AIPMT) 2015 Question Paper with Solution",
-            "NEET (AIPMT) 2014 Question Paper with Solution",
-            "NEET (AIPMT) 2013 Question Paper with Solution"
+            "NEET Test Paper 01 (New Pattern)",
+            "NEET Test Paper 02 (New Pattern)",
+            "NEET Test Paper 03 (New Pattern)",
+            "NEET Test Paper 04 (New Pattern)",
+            "NEET Test Paper 05 (New Pattern)",
+            "NEET Test Paper 06 (New Pattern)",
+            "NEET Test Paper 07 (New Pattern)",
+            "NEET Test Paper 08 (New Pattern)",
+            "NEET Test Paper 09 (New Pattern)",
+            "NEET Test Paper 10 (New Pattern)",
+            "NEET Test Paper 11",
+            "NEET Test Paper 12",
+            "NEET Test Paper 13",
+            "NEET Test Paper 14",
+            "NEET Test Paper 15",
+            "NEET Test Paper 16",
+            "NEET Test Paper 17",
+            "NEET Test Paper 18",
+            "NEET Test Paper 19",
+            "NEET Test Paper 20"
 
         )
         links= arrayOf(
-            "https://drive.google.com/uc?export=download&id=1CctRbxmcXin3THDqJNuZkJhO9OoWK2B0",
-            "https://drive.google.com/uc?export=download&id=1rYZhlPnYawfSa_anT9Y_FDa0XHzz0JAW",
-            "https://drive.google.com/uc?export=download&id=17j2RsQa_LVQ30dv9WSIo55wqGOT799un",
-            "https://drive.google.com/uc?export=download&id=1sK2svJV8kJOxkEmyfUd0WN3Leds8U2GV",
-            "https://drive.google.com/uc?export=download&id=1cW46EYu8gKYU1qXrTolzrxOCrY2CPHYN",
-            "https://drive.google.com/uc?export=download&id=1NywAAZqfujScZBqhiPe4-gfNC7GXvkKU",
-            "https://drive.google.com/uc?export=download&id=1-YSNgY6PjMGEtqThFXHBWoG2ADQXes0U",
-            "https://drive.google.com/uc?export=download&id=1hkJ06hTBrgADIvg6d7cSNM9QQP1AV24a",
-            "https://drive.google.com/uc?export=download&id=1suEXOqdWXi0TheoiQAX1Pf6SApk-W4CA",
-            "https://drive.google.com/uc?export=download&id=1idqr5qa9E7bJSW9nePsd2oxfSziSyNpV",
-            "https://drive.google.com/uc?export=download&id=1h8MYFHSFGtYJuG7qyxrK0NtdmLjh8cSj"
+            "https://drive.google.com/uc?export=download&id=1C2DbH9R-HPHWPHfgBGepRy8KoWKUpRnH",
+            "https://drive.google.com/uc?export=download&id=1OcD_OD3woPXXCPp3MKPyI-246IrygJQE",
+            "https://drive.google.com/uc?export=download&id=1NtA-6paky6AjItEfEnPtHcoKNYp4nsrl",
+            "https://drive.google.com/uc?export=download&id=1xT3kFwMYNYwmxzaZIYYrHWUWxGIbh7oJ",
+            "https://drive.google.com/uc?export=download&id=1uD4OYzn3zlQ8JL4lpHAQgyfHErlW3pif",
+            "https://drive.google.com/uc?export=download&id=1bHwUe7QQ-l2UyaVhf4pegXwrOcVCC0it",
+            "https://drive.google.com/uc?export=download&id=1YlKNacYVh1w2XAFJv2sPGGgQKhxNqeg8",
+            "https://drive.google.com/uc?export=download&id=1yWowJNyDl5wL2S6kHaczdzxk5RPV2p63",
+            "https://drive.google.com/uc?export=download&id=1pgoQFFeS3Uzf2QnZkP_EFr-BACkOJqSY",
+            "https://drive.google.com/uc?export=download&id=1QgOvGIUrOGncvBAZNUDBnAMA2HJAkUTQ",
+            "https://drive.google.com/uc?export=download&id=1l_st_m5h6DN8hQZEBSQIjBc8Z2SxlaoP",
+            "https://drive.google.com/uc?export=download&id=1GknB-7X6SoNK31uRwmmZpOnUSVGDtVRK",
+            "https://drive.google.com/uc?export=download&id=1Czwy2vP8Peny73g3eZMN0rED8S-UobZx",
+            "https://drive.google.com/uc?export=download&id=1VuH3NLsLEErPuUoTu0oJng0SjEUdjmz5",
+            "https://drive.google.com/uc?export=download&id=16Oc2Fry_X3OTcUmZ2RdKXsqUfo5QBgeC",
+            "https://drive.google.com/uc?export=download&id=12NCN0Um2Mjh5ZgbqW5mK0CeTaOc87C3u",
+            "https://drive.google.com/uc?export=download&id=1kb_Wfe7UyQXY04zJzppqW_R6qB04J-Ui",
+            "https://drive.google.com/uc?export=download&id=1U6VUdAL6pEwN5LdugXl8WtXvPogKA8KI",
+            "https://drive.google.com/uc?export=download&id=1gfzL-xsMYYlDZvFAjIiH7gKpXm2rIkwM",
+            "https://drive.google.com/uc?export=download&id=1lAc98AKkGTnuCN8MAzK9TpjC6DJetjCs"
         )
         bookArrayList= arrayListOf()
         fetchData()

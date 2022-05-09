@@ -21,42 +21,18 @@ class ComedkPyqFragment: Fragment(R.layout.fragment_jee_books_list),ItemClicked 
         ecy.layoutManager= LinearLayoutManager(context)
 
         bookName= arrayOf(
-            "BITSAT Test Paper 01",
-            "BITSAT Test Paper 02",
-            "BITSAT Test Paper 03",
-            "BITSAT Test Paper 04",
-            "BITSAT Test Paper 05",
-            "BITSAT Test Paper 06",
-            "BITSAT Test Paper 07",
-            "BITSAT Test Paper 08",
-            "BITSAT Test Paper 09",
-            "BITSAT Test Paper 10",
-            "BITSAT Test Paper 11",
-            "BITSAT Test Paper 12",
-            "BITSAT Test Paper 13",
-            "BITSAT Test Paper 14",
-            "BITSAT Test Paper 15",
-            "BITSAT Test Paper 16",
-            "BITSAT Test Paper 17"
+            "COMEDK 2020 Question Paper",
+            "COMEDK 2019 Question Paper",
+            "COMEDK 2018 Question Paper",
+            "COMEDK 2017 Question Paper",
+            "COMEDK 2016 Question Paper"
         )
         links= arrayOf(
-            "https://drive.google.com/uc?export=download&id=1AKTDcAvJIGpvPaR0LKINtSt7qVz-N_Mk",
-            "https://drive.google.com/uc?export=download&id=1DH_LWI8YXaybG0z-5dfpLoOVgJfBZycX",
-            "https://drive.google.com/uc?export=download&id=1Nt9AiWxUUm7CGGOAwJRgOiD8JGMP0zV_",
-            "https://drive.google.com/uc?export=download&id=1xBqSRoxPG-N8rxnMiy9kWXXn0aRAnc1m",
-            "https://drive.google.com/uc?export=download&id=1ohy1-tj3wG7sVog2VXhJGRP2AZIjAeoe",
-            "https://drive.google.com/uc?export=download&id=1N_weSrPwC3rAfNg8zjv3crdhNhAAwnJC",
-            "https://drive.google.com/uc?export=download&id=1ySBZZ4N_Smu0QMIhgMI7voSxMnwy9ldJ",
-            "https://drive.google.com/uc?export=download&id=1hZX-ieZbhPdfuPZilrMB6O-o3VIsVuju",
-            "https://drive.google.com/uc?export=download&id=18kwTEEFoa-yD7FvoJd5RJMhE53LtDC8-",
-            "https://drive.google.com/uc?export=download&id=13hKUqTkGsBHTrSeEZWvmwyoRbUV5UQgz",
-            "https://drive.google.com/uc?export=download&id=18lh_D56RsKfdnwde4n3H0CA2TK15HsxZ",
-            "https://drive.google.com/uc?export=download&id=1n6LEyRRqNpL8hCTKJUnfp9Z9jYQmVKWi",
-            "https://drive.google.com/uc?export=download&id=16jwTujJw3kJZsuhoryWtTWTSUwopXi8c",
-            "https://drive.google.com/uc?export=download&id=1ARQ-C2ZaxBZ7ZsTvOfYpPGBo429fMUjB",
-            "https://drive.google.com/uc?export=download&id=18vyhTM1_oI21WV2ZOaXP9kOYXXHYNBfY",
-            "https://drive.google.com/uc?export=download&id=1IaQs0shDsIu_W9nIBoghwhdoHocmQvau",
-            "https://drive.google.com/uc?export=download&id=1w-xcNKMqxXaF6vAI37zDxJHVTotEGLkG"
+            "https://drive.google.com/uc?export=download&id=1NTbWX8rMDSToLF5JpvigcJVCP-pXsjii",
+            "https://drive.google.com/uc?export=download&id=1DMytkuJ1uoPo_SY3gcY--YIIXMFeAxWe",
+            "https://drive.google.com/uc?export=download&id=1_8KY76Vks--4mlXyfTo-PrAawXQqO9A1",
+            "https://drive.google.com/uc?export=download&id=1m6AuoZneQKwGoKd6DhntlWnkjKAYojz2",
+            "https://drive.google.com/uc?export=download&id=1rc_l3AmJ0D6_yLQPsWH5q_Z36ayfN2CZ"
         )
         bookArrayList= arrayListOf()
         fetchData()

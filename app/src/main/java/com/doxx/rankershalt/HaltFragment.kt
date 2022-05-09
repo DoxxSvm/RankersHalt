@@ -1,16 +1,21 @@
 package com.doxx.rankershalt
 
-import android.content.ActivityNotFoundException
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.util.Log
+import android.view.MotionEvent
 import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.google.android.play.core.review.ReviewManagerFactory
 import kotlinx.android.synthetic.main.fragment_halt.*
+import java.lang.Exception
 
 
 class HaltFragment : Fragment(R.layout.fragment_halt) {
+    @SuppressLint("ClickableViewAccessibility")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         haltshare.setOnClickListener {
@@ -21,20 +26,71 @@ class HaltFragment : Fragment(R.layout.fragment_halt) {
             intent.type="text/plain"
             startActivity(Intent.createChooser(intent,"Share To:"))
         }
-        haltRating.setOnClickListener{
-            val uri = Uri.parse("market://details?id=com.doxx.rankershalt")
-            val myAppLinkToMarket = Intent(Intent.ACTION_VIEW, uri)
-            startActivity(myAppLinkToMarket)
-            Toast.makeText(context, "Hii", Toast.LENGTH_SHORT).show()
-        }
-        haltrequest.setOnClickListener {
-            val emailIntent = Intent(Intent.ACTION_SENDTO).apply {
-                data = Uri.parse("mailto:support@rankershalt.com")
+        haltRating.setOnTouchListener(View.OnTouchListener { v, event ->
+            try {
+                if (event.action == MotionEvent.ACTION_UP) {
+                    inAppReview()
+                }
             }
-            startActivity(Intent.createChooser(emailIntent, "Send Request"))
+            catch (e :Exception){
+                Toast.makeText(context, e.message.toString(), Toast.LENGTH_SHORT).show()
+            }
+            return@OnTouchListener true
+        })
+
+        haltrequest.setOnClickListener {
+            try{
+                val to = "support@rankershalt.com"
+                val subject = "Book Request"
+                val mailTo = "mailto:" + to +
+                        "?&subject=" + Uri.encode(subject)
+                val emailIntent = Intent(Intent.ACTION_VIEW)
+                emailIntent.data = Uri.parse(mailTo)
+                emailIntent.setPackage("com.google.android.gm");
+                startActivity(emailIntent)
+            }
+            catch (e :Exception){
+                Toast.makeText(context, e.message.toString(), Toast.LENGTH_SHORT).show()
+            }
         }
         haltcontri.setOnClickListener {
-            Toast.makeText(context,"Coming Soon",Toast.LENGTH_SHORT).show()
+            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.buymeacoffee.com/rankershalt"))
+            startActivity(browserIntent)
+        }
+        haltcontactus.setOnClickListener {
+            try{
+                val to = "support@rankershalt.com"
+                val subject = "Help/Support"
+                val mailTo = "mailto:" + to +
+                        "?&subject=" + Uri.encode(subject)
+                val emailIntent = Intent(Intent.ACTION_VIEW)
+                emailIntent.data = Uri.parse(mailTo)
+                emailIntent.setPackage("com.google.android.gm");
+                startActivity(emailIntent)
+            }
+            catch (e :Exception){
+                Toast.makeText(context, e.message.toString(), Toast.LENGTH_SHORT).show()
+            }
+        }
+
+    }
+    fun inAppReview() {
+        val reviewManager = context?.let { ReviewManagerFactory.create(it) }
+        val requestReviewFlow = reviewManager?.requestReviewFlow()
+        requestReviewFlow?.addOnCompleteListener { request ->
+            if (request.isSuccessful) {
+                // We got the ReviewInfo object
+                val reviewInfo = request.result
+                val flow = reviewManager.launchReviewFlow(requireActivity(), reviewInfo)
+                flow.addOnCompleteListener {
+                    // The flow has finished. The API does not indicate whether the user
+                    // reviewed or not, or even whether the review dialog was shown. Thus, no
+                    // matter the result, we continue our app flow.
+                }
+            } else {
+                Log.d("Error: ", request.exception.toString())
+                // There was some problem, continue regardless of the result.
+            }
         }
     }
 }

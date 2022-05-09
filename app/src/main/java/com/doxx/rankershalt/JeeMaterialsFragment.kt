@@ -1,5 +1,6 @@
 package com.doxx.rankershalt
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -45,6 +46,12 @@ class JeeMaterialsFragment : Fragment(R.layout.fragment_jee_materials) {
             }
             jmpyq.setOnClickListener {
                 findNavController().navigate(JeeMaterialsFragmentDirections.actionJeeMaterialsFragmentToJeePyqFragment())
+            }
+            fJeeMaterialssyll.setOnClickListener {
+                val intent = Intent(context,Downloader::class.java)
+                intent.putExtra("title","JEE Syllabus")
+                intent.putExtra("link","https://drive.google.com/uc?export=download&id=1HvgT-OfUSMuVjhGIcPlrdEjV9RJic5wg")
+                startActivity(intent)
             }
             //loadAds()
         }

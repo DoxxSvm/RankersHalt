@@ -1,25 +1,15 @@
 package com.doxx.rankershalt
 
-import android.app.Dialog
-import android.content.Context
 import android.content.Intent
-import android.content.Intent.getIntent
-import android.net.ConnectivityManager
-import android.net.NetworkCapabilities
 import android.net.Uri
 import android.os.Bundle
-import android.util.Log
 import android.view.View
-import android.view.Window
-import android.widget.Button
-import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import kotlinx.android.synthetic.main.bottom_sheet.*
 import kotlinx.android.synthetic.main.fragment_home2.*
-import kotlinx.android.synthetic.main.no_internet.*
+import java.lang.Exception
 
 
 class HomeFragment : Fragment(R.layout.fragment_home2) {
@@ -51,7 +41,6 @@ class HomeFragment : Fragment(R.layout.fragment_home2) {
         fhomevit.setOnClickListener {
             val action = HomeFragmentDirections.actionHomeFragment2ToVitMaterialsFragment()
             findNavController().navigate(action)
-
         }
         fhomeshare.setOnClickListener {
                 val intent= Intent()
@@ -80,6 +69,16 @@ class HomeFragment : Fragment(R.layout.fragment_home2) {
         }
         fhomeccourse.setOnClickListener {
             findNavController().navigate(HomeFragmentDirections.actionHomeFragment2ToCrashCourseFragment())
+        }
+        fhometele.setOnClickListener {
+            try {
+                val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://t.me/+wL0Ik29IunQzMTFl"))
+                intent.setPackage("org.telegram.messenger");
+                startActivity(intent)
+            }
+            catch (e:Exception){
+                Toast.makeText(context, e.message.toString(), Toast.LENGTH_SHORT).show()
+            }
         }
         requireActivity()
             .onBackPressedDispatcher

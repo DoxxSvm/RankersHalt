@@ -73,19 +73,39 @@
             app:destination="@id/vitMaterialsFragment" />
         <action
             android:id="@+id/action_homeFragment2_to_formulaSheetFragment"
-            app:destination="@id/formulaSheetFragment" />
+            app:destination="@id/formulaSheetFragment"
+            app:enterAnim="@transition/slide_in_right"
+            app:exitAnim="@transition/slide_out_left"
+            app:popEnterAnim="@transition/slide_in_left"
+            app:popExitAnim="@transition/slide_out_right"/>
         <action
             android:id="@+id/action_homeFragment2_to_handBookFragment"
-            app:destination="@id/handBookFragment" />
+            app:destination="@id/handBookFragment"
+            app:enterAnim="@transition/slide_in_right"
+            app:exitAnim="@transition/slide_out_left"
+            app:popEnterAnim="@transition/slide_in_left"
+            app:popExitAnim="@transition/slide_out_right"/>
         <action
             android:id="@+id/action_homeFragment2_to_crashCourseFragment"
-            app:destination="@id/crashCourseFragment" />
+            app:destination="@id/crashCourseFragment"
+            app:enterAnim="@transition/slide_in_right"
+            app:exitAnim="@transition/slide_out_left"
+            app:popEnterAnim="@transition/slide_in_left"
+            app:popExitAnim="@transition/slide_out_right"/>
         <action
             android:id="@+id/action_homeFragment2_to_ncertFragment"
-            app:destination="@id/ncertFragment" />
+            app:destination="@id/ncertFragment"
+            app:enterAnim="@transition/slide_in_right"
+            app:exitAnim="@transition/slide_out_left"
+            app:popEnterAnim="@transition/slide_in_left"
+            app:popExitAnim="@transition/slide_out_right"/>
         <action
             android:id="@+id/action_homeFragment2_to_revisionFragment"
-            app:destination="@id/revisionFragment" />
+            app:destination="@id/revisionFragment"
+            app:enterAnim="@transition/slide_in_right"
+            app:exitAnim="@transition/slide_out_left"
+            app:popEnterAnim="@transition/slide_in_left"
+            app:popExitAnim="@transition/slide_out_right"/>
     </fragment>
     <fragment
         android:id="@+id/jeeBooksFragment"

@@ -1,5 +1,6 @@
 package com.doxx.rankershalt
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -26,6 +27,12 @@ class BitsatMaterialsFragment : Fragment(R.layout.fragment_bitsat_materials) {
         }
         fbitsatMaterialsdpp.setOnClickListener {
             findNavController().navigate(BitsatMaterialsFragmentDirections.actionBitsatMaterialsFragmentToJeeDppFragment())
+        }
+        fbitsatMaterialssyll.setOnClickListener {
+            val intent = Intent(context,Downloader::class.java)
+            intent.putExtra("title","BITSAT Syllabus")
+            intent.putExtra("link","https://drive.google.com/uc?export=download&id=1gVvNvD4alTY6UEK_jQOJH73b2jegEjHp")
+            startActivity(intent)
         }
     }
 }

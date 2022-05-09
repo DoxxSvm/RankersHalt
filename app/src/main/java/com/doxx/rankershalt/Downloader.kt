@@ -3,6 +3,7 @@ package com.doxx.rankershalt
 import android.app.ProgressDialog
 import android.content.DialogInterface
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -14,16 +15,19 @@ import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.LoadAdError
 import com.google.android.gms.ads.MobileAds
 import kotlinx.android.synthetic.main.activity_downloader.*
-import kotlinx.android.synthetic.main.fragment_jee_materials.*
+import java.lang.Exception
 import java.text.DecimalFormat
 
 
 class Downloader : AppCompatActivity() {
     var name="helo"
+    var count=0
     private val df = DecimalFormat("0.00")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_downloader)
+        val doxx = Doxx()
+        doxx.setStatusBarGradiant(this)
         loadAds()
         val link = intent.getStringExtra("link")
         val a = intent.getStringExtra("title")
@@ -49,6 +53,24 @@ class Downloader : AppCompatActivity() {
                 startDownload(link)
             }
         }
+        downloader_report_btn.setOnClickListener {
+            try {
+                val to = "support@rankershalt.com"
+                val subject = "Link not working"
+                val body = name
+                val mailTo = "mailto:" + to +
+                        "?&subject=" + Uri.encode(subject) +
+                        "&body=" + Uri.encode(body)
+                val emailIntent = Intent(Intent.ACTION_VIEW)
+                emailIntent.data = Uri.parse(mailTo)
+                emailIntent.setPackage("com.google.android.gm");
+                startActivity(emailIntent)
+            }
+            catch (e: Exception){
+                Toast.makeText(this, "Gmail not found", Toast.LENGTH_SHORT).show()
+            }
+
+        }
     }
     fun startDownload(url:String){
         var downloadId=0
@@ -63,7 +85,12 @@ class Downloader : AppCompatActivity() {
             dialog.dismiss()
             PRDownloader.cancel(downloadId)
         })
-        dialog.show()
+        if(!(this).isFinishing){
+            try {
+                dialog.show()
+            }
+            catch (e:Exception){}
+        }
         val config = PRDownloaderConfig.newBuilder()
             .setDatabaseEnabled(true)
             .build()
@@ -88,20 +115,35 @@ class Downloader : AppCompatActivity() {
                 override fun onDownloadComplete() {
                     Toast.makeText(this@Downloader,"Download Completed",Toast.LENGTH_SHORT).show()
                     dialog.dismiss()
-                    var intent = Intent(applicationContext,ViewBook::class.java)
+                    val intent = Intent(applicationContext,ViewBook::class.java)
                     intent.putExtra("Filename",name)
                     startActivity(intent)
 
                 }
                 override fun onError(error: com.downloader.Error?) {
-                    Toast.makeText(this@Downloader, "Retrying", Toast.LENGTH_SHORT).show()
-                    dialog.dismiss()
-                    startDownload(url)
+                    try{
+                        if(count<1){
+                            Toast.makeText(this@Downloader, "Unstable connection...Retrying!", Toast.LENGTH_SHORT).show()
+                        }
+
+                        dialog.dismiss()
+                        if(count<7){
+                            startDownload(url)
+                            count++
+                        }
+                        else{
+                            Toast.makeText(this@Downloader, "Link expired.Please report!", Toast.LENGTH_SHORT).show()
+                            count=0
+                        }
+                    }
+                    catch (e:Exception){
+                        Toast.makeText(this@Downloader, "Link expired.Please report!!", Toast.LENGTH_SHORT).show()
+                    }
                 }
 
             })
     }
-    fun loadAds(){
+    private fun loadAds(){
         MobileAds.initialize(applicationContext) {}
 
         val adRequest = AdRequest.Builder().build()

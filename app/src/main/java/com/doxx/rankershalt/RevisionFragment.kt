@@ -21,31 +21,23 @@ class RevisionFragment: Fragment(R.layout.fragment_jee_books_list),ItemClicked {
         ecy.layoutManager= LinearLayoutManager(context)
 
         bookName= arrayOf(
-            "NEET 2021 Question Paper with Solution",
-            "NEET 2020 Question Paper with Solution",
-            "NEET 2019 Question Paper with Solution",
-            "NEET 2018 Question Paper with Solution",
-            "NEET 2017 Question Paper with Solution",
-            "NEET 2016 Question Paper with Solution",
-            "NEET (AIPMT) 2016 Question Paper with Solution",
-            "NEET 2015 Question Paper with Solution",
-            "NEET (AIPMT) 2015 Question Paper with Solution",
-            "NEET (AIPMT) 2014 Question Paper with Solution",
-            "NEET (AIPMT) 2013 Question Paper with Solution"
-
+            "Biology Revision Notes - 11th",
+            "Biology Revision Notes - 12th",
+            "Inorganic Revision Notes",
+            "Maths Revision Notes",
+            "Physical and organic Revision Notes",
+            "Physics Revision Notes",
+            "Disha Handbook for Revision"
         )
         links= arrayOf(
-            "https://drive.google.com/uc?export=download&id=1CctRbxmcXin3THDqJNuZkJhO9OoWK2B0",
-            "https://drive.google.com/uc?export=download&id=1rYZhlPnYawfSa_anT9Y_FDa0XHzz0JAW",
-            "https://drive.google.com/uc?export=download&id=17j2RsQa_LVQ30dv9WSIo55wqGOT799un",
-            "https://drive.google.com/uc?export=download&id=1sK2svJV8kJOxkEmyfUd0WN3Leds8U2GV",
-            "https://drive.google.com/uc?export=download&id=1cW46EYu8gKYU1qXrTolzrxOCrY2CPHYN",
-            "https://drive.google.com/uc?export=download&id=1NywAAZqfujScZBqhiPe4-gfNC7GXvkKU",
-            "https://drive.google.com/uc?export=download&id=1-YSNgY6PjMGEtqThFXHBWoG2ADQXes0U",
-            "https://drive.google.com/uc?export=download&id=1hkJ06hTBrgADIvg6d7cSNM9QQP1AV24a",
-            "https://drive.google.com/uc?export=download&id=1suEXOqdWXi0TheoiQAX1Pf6SApk-W4CA",
-            "https://drive.google.com/uc?export=download&id=1idqr5qa9E7bJSW9nePsd2oxfSziSyNpV",
-            "https://drive.google.com/uc?export=download&id=1h8MYFHSFGtYJuG7qyxrK0NtdmLjh8cSj"
+            "https://drive.google.com/uc?export=download&id=10UM2Go83tqjIdasZnDzWCW0H4Fn6-SQZ",
+            "https://drive.google.com/uc?export=download&id=10acUytyufxoq4TvuNcurWvkBTm75yoPK",
+            "https://drive.google.com/uc?export=download&id=1zkz2IqJ3xQtj4Aj3VGrqP9w9gC6n8LSw",
+            "https://drive.google.com/uc?export=download&id=1zgHmwPWVCR6uE_JpcxqQ3dCP5fJ7jWPi",
+            "https://drive.google.com/uc?export=download&id=1zjek66j53j55glUW-IUAvivcdQhMQRfU",
+            "https://drive.google.com/uc?export=download&id=1zgdSkIYuE88cRHeCEr3GxhGjjKZKdZMT",
+            "https://drive.google.com/uc?export=download&id=17LvsZSSPZwq1-N74pEAekWqLcpOGERrM",
+
         )
         bookArrayList= arrayListOf()
         fetchData()

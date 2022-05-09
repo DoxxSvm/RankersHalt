@@ -48,6 +48,6 @@
         android:paddingTop="100dp"
         android:fontFamily="@font/nunito_sans_light"
         android:gravity="center"
-        android:text="No downloaded Books"
+        android:text="No Downloaded Books"
         android:textSize="20sp"/>
 </LinearLayout>

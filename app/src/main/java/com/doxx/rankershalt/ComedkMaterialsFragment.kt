@@ -1,5 +1,6 @@
 package com.doxx.rankershalt
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -27,6 +28,12 @@ class ComedkMaterialsFragment : Fragment(R.layout.fragment_comedk_materials) {
         }
         fComedkMaterialsdpp.setOnClickListener {
             findNavController().navigate(ComedkMaterialsFragmentDirections.actionComedkMaterialsFragmentToJeeDppFragment())
+        }
+        fComedkMaterialssyll.setOnClickListener {
+            val intent = Intent(context,Downloader::class.java)
+            intent.putExtra("title","COMEDK Syllabus")
+            intent.putExtra("link","https://drive.google.com/uc?export=download&id=16PdwfUTcg0u6_TOJLzAB1ApzF8_dIet7")
+            startActivity(intent)
         }
 
     }

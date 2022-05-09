@@ -1,6 +1,7 @@
 package com.doxx.rankershalt
 
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
@@ -31,6 +32,12 @@ class NeetMaterialsFragment : Fragment(R.layout.fragment_neet_materials) {
         }
         neetpyq.setOnClickListener {
             findNavController().navigate(NeetMaterialsFragmentDirections.actionNeetMaterialsFragmentToNeetPyqFragment())
+        }
+        fNeetMaterialssyll.setOnClickListener {
+            val intent = Intent(context,Downloader::class.java)
+            intent.putExtra("title","NEET Syllabus")
+            intent.putExtra("link","https://drive.google.com/uc?export=download&id=1UZYdLFAgle0QuieJsH2qKCIpHogy4VgD")
+            startActivity(intent)
         }
 
     }

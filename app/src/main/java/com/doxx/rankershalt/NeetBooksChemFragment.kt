@@ -21,54 +21,32 @@ class NeetBooksChemFragment: Fragment(R.layout.fragment_jee_books_list),ItemClic
         ecy.layoutManager= LinearLayoutManager(context)
 
         bookName= arrayOf(
-            "Aldehydes, Ketones and Carboxylic Acid NCERT Highlighted",
-            "Amines NCERT Highlighted",
-            "Biomolecules NCERT Highlighted",
-            "Chemical Bonding and Molecular Structure NCERT Highlighted",
-            "Chemical Kinetics NCERT Highlighted",
-            "Chemistry in Everyday Life NCERT Highlighted",
-            "Coordination Chemistry NCERT Highlighted",
-            "D and F block elements NCERT Highlighted",
-            "Electrochemistry NCERT Highlighted",
-            "Environmental Chemistry NCERT Highlighted",
-            "Haloalkanes and haloarenes NCERT Highlighted",
-            "Hydrogen NCERT Highlighted",
-            "P-block elements NCERT Highlighted",
-            "Periodic Table NCERT Highlighted",
-            "Polymers NCERT Highlighted",
-            "Solid State NCERT Highlighted",
-            "Solution NCERT Highlighted",
-            "Some Basic Concept of Chemistry NCERT Highlighted",
-            "State of Matter NCERT Highlighted",
-            "Structure of Atom NCERT Highlighted",
-            "Surface Chemistry NCERT Highlighted",
-            "S-Block elements NCERT Highlighted"
+            "33 Years Chapterwise NEET Solved Paper - Chemistry",
+            "Arihant Master the NCERT Chemistry Class 11 Part 1",
+            "Arihant Master the NCERT Chemistry Class 11 Part 2",
+            "Arihant Master the NCERT Chemistry Class 12 Part 1",
+            "Arihant Master the NCERT Chemistry Class 12 Part 2",
+            "NCERT Chemistry class 11 part 1",
+            "NCERT Chemistry class 11 part 2",
+            "NCERT Chemistry class 12 part 1",
+            "NCERT Chemistry class 12 part 2",
+            "Advanced Problems in Organic Chemistry - MS Chouhan",
+            "Balaji Problems in Inorganic Chemistry - VK Jaiswal",
+            "Physical Chemistry - N Awasthi"
         )
         links= arrayOf(
-            "https://drive.google.com/uc?export=download&id=1mPWzL-kn8pmpg5Wqg8o_3j0tf-6QrkmZ",
-            "https://drive.google.com/uc?export=download&id=1fDVdSeaAK66XvJ1XjxIs5iAhq3hcVp8g",
-            "https://drive.google.com/uc?export=download&id=1AGz4xhZr54tbxHMZjDmhgW26rO5jqoIp",
-            "https://drive.google.com/uc?export=download&id=1-CNoLnphOcZaQDlfbrtVltHksSjf5cyn",
-            "https://drive.google.com/uc?export=download&id=1ttJh1GZWd6MJvAGZfZLICrnHhnvn5Qsn",
-            "https://drive.google.com/uc?export=download&id=1ksFJB37xZ0YctZak8ElmXiCkc9lJoUbV",
-            "https://drive.google.com/uc?export=download&id=19EdRFQVxvvuUbXhtycUqi9S2OMmH0RoG",
-            "https://drive.google.com/uc?export=download&id=1R7lu779NhZmTPgEDprr--qlZXvuH2xP7",
-            "https://drive.google.com/uc?export=download&id=11n0OnGNyOjONXBohY2l2OWq0osQgxE40",
-            "https://drive.google.com/uc?export=download&id=1SfsnmeJb6y51tJqXsoC_PGNwCgdRnTLX",
-            "https://drive.google.com/uc?export=download&id=1ZX6D1aqDjba4kR8r-RktzFq_POb2prok",
-            "https://drive.google.com/uc?export=download&id=1Vol-p1K8sADp_gHGHWYg34tSxZiYF1Nt",
-            "https://drive.google.com/uc?export=download&id=1bhPmFaAhqx3xuV8xB7IgsEdIsLxbZAE2",
-            "https://drive.google.com/uc?export=download&id=1tqeVtVINM04fGaidkrHS4fp0vvwjfkHC",
-            "https://drive.google.com/uc?export=download&id=1KmEzcgkmXOvw96ZkyDk_e-3UxOJQOcHy",
-            "https://drive.google.com/uc?export=download&id=/1VsvhDrFmy2YlOuyETipm33xKZA4S8C-a",
-            "https://drive.google.com/uc?export=download&id=12vTcuDDrkXIhgKJFqjHN6HbSqaic_nT7",
-            "https://drive.google.com/uc?export=download&id=1TChAzplReJq7u7PlnUa-8B1Af4Kb3jQE",
-            "https://drive.google.com/uc?export=download&id=15vOPCRzU-iciE12n0erqA8NxaeINUwaL",
-            "https://drive.google.com/uc?export=download&id=1_U5MsuRZjayycOqTaArUTLjYkdUn2gb7",
-            "https://drive.google.com/uc?export=download&id=1twbW3eaqHYdS01eQ7MivfLuQcDST4-U3",
-            "https://drive.google.com/uc?export=download&id=1Iw7iEU7MgbPi81ips-yv6UENcLfOXH1R"
-
-
+            "https://drive.google.com/uc?export=download&id=1pye1yusbpjfJ9jaP-seNK4h1xA9BhYTz",
+            "https://drive.google.com/uc?export=download&id=1mONWCwZPmtUdBqGNQx08aVIYUSnPQUU0",
+            "https://drive.google.com/uc?export=download&id=1jm04ionxVfJm9CdRpptCF5BDhWlB1jv-",
+            "https://drive.google.com/uc?export=download&id=13g0eg810qYGsJRTGjjhzSCxurGnspH0B",
+            "https://drive.google.com/uc?export=download&id=1KJIwVg5D2TTNSxK0yiFyUkz2TKceOg-5",
+            "https://drive.google.com/uc?export=download&id=10krIiBi_VZaex2j06MxiWT4SWIFnbAIk",
+            "https://drive.google.com/uc?export=download&id=1-CzQER1XqZFbkv1izKIK8njWg0g_WYDU",
+            "https://drive.google.com/uc?export=download&id=1zrSXrwLS-HZLE6qSuGKAkd7pBSy0Z4RK",
+            "https://drive.google.com/uc?export=download&id=1zxtV4AlTZ9iVVccVbbqL9eRWHjE7YvqU",
+            "https://drive.google.com/uc?export=download&id=1W5Aeup9wXnIGBX0Pfrk0Bj5uLBts7iXG",
+            "https://drive.google.com/uc?export=download&id=1jL86q7OuLXrmf9QkBBoGpdF7HstNnGhD",
+            "https://drive.google.com/uc?export=download&id=1bdhAyzhBs1A4b3yMVk6EYpa6u4hk-RkH"
         )
         bookArrayList= arrayListOf()
         fetchData()

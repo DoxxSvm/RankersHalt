@@ -1,5 +1,6 @@
 package com.doxx.rankershalt
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -25,6 +26,12 @@ class VitMaterialsFragment : Fragment(R.layout.fragment_vit_materials) {
         }
         fVitMaterialsdpp.setOnClickListener {
             findNavController().navigate(VitMaterialsFragmentDirections.actionVitMaterialsFragmentToJeeDppFragment())
+        }
+        fVitMaterialssyll.setOnClickListener {
+            val intent = Intent(context,Downloader::class.java)
+            intent.putExtra("title","VITEEE Syllabus")
+            intent.putExtra("link","https://drive.google.com/uc?export=download&id=1YW7ziXo5hbcQAPmsu08HSiiG0CUd6Szq")
+            startActivity(intent)
         }
     }
 }

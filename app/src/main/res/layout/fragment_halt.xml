@@ -59,8 +59,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="If you want to read any book and it is
-not available on our app,Please submit a request so that we can upload it in our next update."
+                        android:text="Are we lacking on some content? Feel free to request us. We will try to add it as soon as possible!"
                         android:textSize="15sp"
                         android:fontFamily="@font/nunito_sans_light"
                         android:layout_marginTop="10dp"
@@ -102,7 +101,7 @@ not available on our app,Please submit a request so that we can upload it in our
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
                         android:layout_marginTop="10dp"
-                        android:text="Share RankersHalt"
+                        android:text="Want to contribute?"
                         android:textColor="#2E2A2A"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -110,28 +109,29 @@ not available on our app,Please submit a request so that we can upload it in our
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Studying with friends is always fun. Share Rankershalt and let them
-know about this amazing app you using!!!"
+                        android:text="Working day and night for you. Your love and Coffee are the only two things that keep us awake.
+Even a small cup will be appreciated."
                         android:textSize="15sp"
                         android:fontFamily="@font/nunito_sans_light"
                         android:layout_marginTop="10dp"
                         android:layout_marginLeft="20dp"/>
                     <Button
-                        android:id="@+id/haltshare"
+                        android:id="@+id/haltcontri"
                         android:layout_width="wrap_content"
                         android:layout_height="40dp"
-                        android:layout_marginBottom="5dp"
                         android:layout_marginRight="10dp"
+                        android:layout_marginBottom="5dp"
                         android:layout_gravity="bottom|right"
                         android:textSize="10sp"
                         android:backgroundTint="#E8D7D7"
-                        android:text="Share"
+                        android:text="Buy Me a coffee"
                         android:textColor="#152033" />
 
 
                 </LinearLayout>
 
             </com.google.android.material.card.MaterialCardView>
+
             <com.google.android.material.card.MaterialCardView
 
                 android:layout_width="match_parent"
@@ -161,8 +161,7 @@ know about this amazing app you using!!!"
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="We are working day and night to provide you the best materials
-,if you think our work is appreciable,Let us know"
+                        android:text="If we helped you to improve your rank, let us know"
                         android:textSize="15sp"
                         android:fontFamily="@font/nunito_sans_light"
                         android:layout_marginTop="10dp"
@@ -180,54 +179,136 @@ know about this amazing app you using!!!"
             </com.google.android.material.card.MaterialCardView>
             <com.google.android.material.card.MaterialCardView
 
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            app:cardBackgroundColor="#FDFDFD"
-            app:cardCornerRadius="15dp"
-                app:cardElevation="20dp"
-            app:strokeColor="@color/black"
-            app:strokeWidth="1dp">
-
-            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="#FDFDFD"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="20dp"
+                app:strokeColor="@color/black"
+                app:strokeWidth="1dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="10dp"
-                    android:text="Want to contribute?"
-                    android:textColor="#2E2A2A"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="If we helped you to improve your rank, Buy me a coffee. Little contribution would be appreciated"
-                    android:textSize="15sp"
-                    android:fontFamily="@font/nunito_sans_light"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="20dp"/>
-                <Button
-                    android:id="@+id/haltcontri"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginBottom="5dp"
-                    android:layout_gravity="bottom|right"
-                    android:textSize="10sp"
-                    android:backgroundTint="#E8D7D7"
-                    android:text="Buy Me a coffee"
-                    android:textColor="#152033" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Share RankersHalt"
+                        android:textColor="#2E2A2A"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Studying with friends is always fun. Share Rankershalt and let them
+know about this amazing app you using!"
+                        android:textSize="15sp"
+                        android:fontFamily="@font/nunito_sans_light"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="20dp"/>
+                    <Button
+                        android:id="@+id/haltshare"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_gravity="bottom|right"
+                        android:textSize="10sp"
+                        android:backgroundTint="#E8D7D7"
+                        android:text="Share"
+                        android:textColor="#152033" />
 
 
-            </LinearLayout>
+                </LinearLayout>
 
-        </com.google.android.material.card.MaterialCardView>
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="#FDFDFD"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="20dp"
+                app:strokeColor="@color/black"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Help and Support"
+                        android:textColor="#2E2A2A"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Found a bug? Have any query? "
+                        android:textSize="15sp"
+                        android:fontFamily="@font/nunito_sans_light"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="20dp"/>
+                    <Button
+                        android:id="@+id/haltcontactus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_gravity="bottom|right"
+                        android:textSize="10sp"
+                        android:backgroundTint="#E8D7D7"
+                        android:text="Contact us"
+                        android:textColor="#152033" />
+
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="#FDFDFD"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="20dp"
+                app:strokeColor="@color/black"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rankershalt do not own any materials posted on this app. We simply put those materials which are available on the internet. Our team just want to help those students and others who cannot afford buying these contents. If You are financially able to purchase this or you think this Study Material/Book is Useful, Please Get It Legally from the publishers. Rankershalt encourage students to buy from original sources. Our team does not support piracy, materials are posted on this website which is available on the internet. If you are the owner/ Publisher of the materials posted here, you can reach us at support@rankershalt.com. We will take down the materials within 24 hours. "
+                        android:textSize="5sp"
+                        android:fontFamily="@font/nunito_sans_light"
+                        android:layout_margin="8dp"
+                        android:layout_marginLeft="20dp"/>
+
+
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
 
 
 
