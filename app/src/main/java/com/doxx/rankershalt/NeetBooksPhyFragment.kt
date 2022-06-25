@@ -22,6 +22,8 @@ class NeetBooksPhyFragment: Fragment(R.layout.fragment_jee_books_list),ItemClick
 
         bookName= arrayOf(
             "33 Years NEET Solved Paper - Physics",
+            "MTG NCERT Fingertips Physics Class 11",
+            "MTG NCERT Fingertips Physics Class 12",
             "Arihant Master the NCERT Physics Class 11 Part 1",
             "Arihant Master the NCERT Physics Class 11 Part 2",
             "Arihant Master the NCERT Physics Class 12 Part 1",
@@ -31,13 +33,18 @@ class NeetBooksPhyFragment: Fragment(R.layout.fragment_jee_books_list),ItemClick
             "DC Pandey Mechanics Volume 2",
             "DC Pandey Optics And Modern Physics",
             "DC Pandey Waves And Thermodynamics",
-            "Concept of Physics HC Verma Volume 1",
-            "Concept of Physics HC Verma Volume 2",
-            "Concept of Physics HC Verma Solutions Volume 1",
-            "Concept of Physics HC Verma Solutions Volume 2"
+            "HC Verma Concept of Physics Volume 1",
+            "HC Verma Concept of Physics Volume 2",
+            "HC Verma Concept of Physics Solutions Volume 1",
+            "HC Verma Concept of Physics Solutions Volume 2",
+            "NCERT Exemplar Class 11 Physics",
+            "NCERT Exemplar Class 12 Physics",
+
         )
         links= arrayOf(
             "https://drive.google.com/uc?export=download&id=1dhmY5YBLAcxuoJGEYDxkY-vi1TaiMCTJ",
+            "https://drive.google.com/uc?export=download&id=1-Xyal7dxwbcqPVDUyHMNM76YdZ-QzjYL",
+            "https://drive.google.com/uc?export=download&id=1-VqMluP5OhRbaxb79V_9jN8BZhqWLsQN",
             "https://drive.google.com/uc?export=download&id=1UJry_BCKp4mLqWrrIlpDPnKjlJWYZLN7",
             "https://drive.google.com/uc?export=download&id=18yZnYd-w3fiKNm7dJwiSOCX4ftjb1q4x",
             "https://drive.google.com/uc?export=download&id=1RhqqJWygEW-Az2-kbeyc6MUKyK9HQ3R4",
@@ -50,7 +57,10 @@ class NeetBooksPhyFragment: Fragment(R.layout.fragment_jee_books_list),ItemClick
             "https://drive.google.com/uc?export=download&id=1kZHkkzAbeofxsn_gkh_0Gprvc4jnCuoZ",
             "https://drive.google.com/uc?export=download&id=1UVmhHW2MWgwoYDG6gFE-KQYVcE3Ki3q_",
             "https://drive.google.com/uc?export=download&id=1b5ZWp1vMlgScrb3YY2T-tHBLdl9QFupC",
-            "https://drive.google.com/uc?export=download&id=1-PCmB2Q60wYrUvDHsO7b3ShGT46wyiKY"
+            "https://drive.google.com/uc?export=download&id=1-PCmB2Q60wYrUvDHsO7b3ShGT46wyiKY",
+            "https://drive.google.com/uc?export=download&id=101MpMOfEnU_HmTJZkvQ8G3sioBKqoAlA",
+            "https://drive.google.com/uc?export=download&id=1HHPDljWDqxyRqcjP6W-ARAtooLdU57X1",
+
         )
         bookArrayList= arrayListOf()
         fetchData()

@@ -1,6 +1,10 @@
+
 <resources>
     <string name="app_name">RankersHalt</string>
     <string name="Banner_ad_unit">"ca-app-pub-2985582773868656/3680477091"</string>
-
+    <!-- sample - ca-app-pub-3940256099942544/6300978111 -->
+    <!-- real - ca-app-pub-2985582773868656/3680477091 -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="reward">"Reward I - Combo Pack consisting of Each and Every Cengage Books of Physics, Chemistry and Mathematics.\nReward II - Allen DPP and Modules \nReward III - Etoos Education Full Video Lectures for JEE and NEET (Consisting of Renowned Teachers like NV Sir, PS Sir, JH Sir and more, Costing more than ₹30,000"</string>
+    <string name="share">RankersID: %1$s \nGet access to our Premium JEE/NEET Content collection.Just Refer the link below to 5 people, mail us back the RankersID of each.</string>
 </resources>

@@ -31,10 +31,22 @@ class JeeBooksChemFragment: Fragment(R.layout.fragment_jee_books_list),ItemClick
             "Arihant Master the NCERT Chemistry Class 11 Part 2",
             "Arihant Master the NCERT Chemistry Class 12 Part 1",
             "Arihant Master the NCERT Chemistry Class 12 Part 2",
+            "Physical Chemistry - OP Tandon",
+            "Inorganic Chemistry - OP Tandon",
+            "Organic Chemistry - OP Tandon",
             "NCERT Chemistry class 11 part 1",
             "NCERT Chemistry class 11 part 2",
             "NCERT Chemistry class 12 part 1",
             "NCERT Chemistry class 12 part 2",
+            "NCERT Exemplar Class 11 Chemistry",
+            "NCERT Exemplar Class 12 Chemistry",
+            "Physical Chemistry - J Ross",
+            "Physical Chemistry - P Bahadur",
+            "Pradeep Chemistry Class 11",
+            "MTG NCERT Fingertips Chemistry Class 11 & 12",
+            "JD LEE Concise Inorganic Chemistry Sudharshan Guha",
+            "Problem and Solutions in Inorganic Chemistry (Chapter 01 - 04)",
+            "Problem and Solutions in Inorganic Chemistry (Chapter 05 - 12)"
 
         )
         links= arrayOf(
@@ -43,15 +55,27 @@ class JeeBooksChemFragment: Fragment(R.layout.fragment_jee_books_list),ItemClick
             "https://drive.google.com/uc?export=download&id=1bbH6J7OgcirFLJ7komDs6VDM1UGtRFDo",
             "https://drive.google.com/uc?export=download&id=1bdhAyzhBs1A4b3yMVk6EYpa6u4hk-RkH",
             "https://drive.google.com/uc?export=download&id=1VjlJifImLccDLbq7RgSF29TeHlbMQnpx",
-            "https://cdn-102.anonfiles.com/f2E1f3Q3u8/d7bf1b15-1652035937/JEE%20Wiley's%20Solomons%20Fryhle%20Snyder%20%20-%20MS%20Chouhan.pdf",
+            "https://drive.google.com/uc?export=download&id=1BS68i0jahjVcZvhVT5Ymhra06Z6MYx-a",
             "https://drive.google.com/uc?export=download&id=1mONWCwZPmtUdBqGNQx08aVIYUSnPQUU0",
             "https://drive.google.com/uc?export=download&id=1jm04ionxVfJm9CdRpptCF5BDhWlB1jv-",
             "https://drive.google.com/uc?export=download&id=13g0eg810qYGsJRTGjjhzSCxurGnspH0B",
             "https://drive.google.com/uc?export=download&id=1KJIwVg5D2TTNSxK0yiFyUkz2TKceOg-5",
+            "https://drive.google.com/uc?export=download&id=1BTkowg7qE9llipPjzmAVM6sroZa5DHNe",
+            "https://drive.google.com/uc?export=download&id=1wrWs4Et-FLEj82IVCnUfAEmUwKPmNnkr",
+            "https://drive.google.com/uc?export=download&id=1qP8yaz0BpnG4ORMIJALmfOt37Ozfh-Iq",
             "https://drive.google.com/uc?export=download&id=10krIiBi_VZaex2j06MxiWT4SWIFnbAIk",
             "https://drive.google.com/uc?export=download&id=1-CzQER1XqZFbkv1izKIK8njWg0g_WYDU",
             "https://drive.google.com/uc?export=download&id=1zrSXrwLS-HZLE6qSuGKAkd7pBSy0Z4RK",
             "https://drive.google.com/uc?export=download&id=1zxtV4AlTZ9iVVccVbbqL9eRWHjE7YvqU",
+            "https://drive.google.com/uc?export=download&id=1WBv1WFRXLYKlCar7hXRvodhz_4YYanK9",
+            "https://drive.google.com/uc?export=download&id=1sJKzimYQDAbmOFcHD5EkPKtHkepSuBrZ",
+            "https://drive.google.com/uc?export=download&id=1-KBFwG1PpblSba5x0bUCF75UGvQyFMlo",
+            "https://drive.google.com/uc?export=download&id=1-ZO6iFf9StmMEjRpAVwthiQ81y3POlAK",
+            "https://drive.google.com/uc?export=download&id=1077MDdYX3I144dG-_6ybPzOc6uiuL51H",
+            "https://drive.google.com/uc?export=download&id=10EAgZf0VBYO_ck8yVNtcZJrRlVmthGEL",
+            "https://drive.google.com/uc?export=download&id=10BN-2AdJUwEBicdGCJGEqNyspeCcRqfv",
+            "https://drive.google.com/uc?export=download&id=1-8kNlg-gDA6DKOya5ClsdB1JmNljDUDB",
+            "https://drive.google.com/uc?export=download&id=1-9LWigd9PuwBMKyf_HWN2FC5lUID4iWb"
 
         )
         bookArrayList= arrayListOf()

@@ -4,13 +4,13 @@
 4
 5    <uses-sdk
 6        android:minSdkVersion="16"
-6-->/home/doxx/AndroidStudioProjects/RankersHalt/nativetemplates/src/main/AndroidManifest.xml
+6-->/home/doxx/StudioProjects/RankersHalt/nativetemplates/src/main/AndroidManifest.xml
 7        android:targetSdkVersion="30" />
-7-->/home/doxx/AndroidStudioProjects/RankersHalt/nativetemplates/src/main/AndroidManifest.xml
+7-->/home/doxx/StudioProjects/RankersHalt/nativetemplates/src/main/AndroidManifest.xml
 8
 9    <application android:supportsRtl="true" >
-9-->/home/doxx/AndroidStudioProjects/RankersHalt/nativetemplates/src/main/AndroidManifest.xml:3:3-5:17
-9-->/home/doxx/AndroidStudioProjects/RankersHalt/nativetemplates/src/main/AndroidManifest.xml:3:16-42
+9-->/home/doxx/StudioProjects/RankersHalt/nativetemplates/src/main/AndroidManifest.xml:3:3-5:17
+9-->/home/doxx/StudioProjects/RankersHalt/nativetemplates/src/main/AndroidManifest.xml:3:16-42
 10    </application>
 11
 12</manifest>

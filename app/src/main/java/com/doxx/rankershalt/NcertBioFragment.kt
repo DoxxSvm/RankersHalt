@@ -47,7 +47,6 @@ class NcertBioFragment: Fragment(R.layout.fragment_jee_books_list),ItemClicked {
             "https://drive.google.com/uc?export=download&id=1cLht8BnyP0_B89OzTG6r9y1TSrPp6CBz",
             "https://drive.google.com/uc?export=download&id=1PqfUg9qP22TsGRal5lXt3sQM_Y1IqY7P",
             "https://drive.google.com/uc?export=download&id=1CbPZWXkvISTbUhwwZKRyA_fzxw_SSIsg"
-
         )
         bookArrayList= arrayListOf()
         fetchData()

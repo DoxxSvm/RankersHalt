@@ -27,8 +27,8 @@ class FormulaSheetFragment: Fragment(R.layout.fragment_jee_books_list),ItemClick
         )
         links= arrayOf(
             "https://drive.google.com/uc?export=download&id=1C0_PPmoBDTuZQ7YtioDLE8qLuX4DwWWd",
-            "https://drive.google.com/uc?export=download&id=1YlXnEfhvciBCdrIsa6432mN8MRM5DihO",
-            "https://drive.google.com/uc?export=download&id=1bIm96t5IlzTT-u3SnbQn09zlK46kz7Os"
+            "https://drive.google.com/uc?export=download&id=1bIm96t5IlzTT-u3SnbQn09zlK46kz7Os",
+            "https://drive.google.com/uc?export=download&id=1YlXnEfhvciBCdrIsa6432mN8MRM5DihO"
         )
         bookArrayList= arrayListOf()
         fetchData()
@@ -37,7 +37,6 @@ class FormulaSheetFragment: Fragment(R.layout.fragment_jee_books_list),ItemClick
         adapter= Adapter(bookArrayList,this)
         ecy.adapter=adapter
         bookListSearchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
-
 
             override fun onQueryTextChange(p0: String?): Boolean {
                 val search = p0!!.lowercase(Locale.getDefault())

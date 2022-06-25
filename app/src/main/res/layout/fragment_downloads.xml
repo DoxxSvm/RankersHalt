@@ -19,10 +19,10 @@
         android:textSize="30sp" />
     <androidx.appcompat.widget.SearchView
         android:layout_width="wrap_content"
-        android:padding="10dp"
+        android:padding="5dp"
         style="@style/SearchViewStyle"
         android:id="@+id/downloadsSearchView"
-        android:layout_height="65dp"/>
+        android:layout_height="55dp"/>
 
 
 

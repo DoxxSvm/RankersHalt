@@ -22,6 +22,7 @@ class NeetBooksChemFragment: Fragment(R.layout.fragment_jee_books_list),ItemClic
 
         bookName= arrayOf(
             "33 Years Chapterwise NEET Solved Paper - Chemistry",
+            "MTG NCERT Fingertips Chemistry Class 11 & 12",
             "Arihant Master the NCERT Chemistry Class 11 Part 1",
             "Arihant Master the NCERT Chemistry Class 11 Part 2",
             "Arihant Master the NCERT Chemistry Class 12 Part 1",
@@ -32,10 +33,19 @@ class NeetBooksChemFragment: Fragment(R.layout.fragment_jee_books_list),ItemClic
             "NCERT Chemistry class 12 part 2",
             "Advanced Problems in Organic Chemistry - MS Chouhan",
             "Balaji Problems in Inorganic Chemistry - VK Jaiswal",
-            "Physical Chemistry - N Awasthi"
+            "Physical Chemistry - N Awasthi",
+            "NCERT Exemplar Class 11 Chemistry",
+            "NCERT Exemplar Class 12 Chemistry",
+            "Physical Chemistry - J Ross",
+            "Physical Chemistry - P Bahadur",
+            "Pradeep Chemistry Class 11",
+            "JD LEE Concise Inorganic Chemistry Sudharshan Guha",
+            "Problem and Solutions in Inorganic Chemistry (Chapter 01 - 04)",
+            "Problem and Solutions in Inorganic Chemistry (Chapter 05 - 12)"
         )
         links= arrayOf(
             "https://drive.google.com/uc?export=download&id=1pye1yusbpjfJ9jaP-seNK4h1xA9BhYTz",
+            "https://drive.google.com/uc?export=download&id=10EAgZf0VBYO_ck8yVNtcZJrRlVmthGEL",
             "https://drive.google.com/uc?export=download&id=1mONWCwZPmtUdBqGNQx08aVIYUSnPQUU0",
             "https://drive.google.com/uc?export=download&id=1jm04ionxVfJm9CdRpptCF5BDhWlB1jv-",
             "https://drive.google.com/uc?export=download&id=13g0eg810qYGsJRTGjjhzSCxurGnspH0B",
@@ -45,8 +55,16 @@ class NeetBooksChemFragment: Fragment(R.layout.fragment_jee_books_list),ItemClic
             "https://drive.google.com/uc?export=download&id=1zrSXrwLS-HZLE6qSuGKAkd7pBSy0Z4RK",
             "https://drive.google.com/uc?export=download&id=1zxtV4AlTZ9iVVccVbbqL9eRWHjE7YvqU",
             "https://drive.google.com/uc?export=download&id=1W5Aeup9wXnIGBX0Pfrk0Bj5uLBts7iXG",
-            "https://drive.google.com/uc?export=download&id=1jL86q7OuLXrmf9QkBBoGpdF7HstNnGhD",
-            "https://drive.google.com/uc?export=download&id=1bdhAyzhBs1A4b3yMVk6EYpa6u4hk-RkH"
+            "https://drive.google.com/uc?export=download&id=1bbH6J7OgcirFLJ7komDs6VDM1UGtRFDo",
+            "https://drive.google.com/uc?export=download&id=1bdhAyzhBs1A4b3yMVk6EYpa6u4hk-RkH",
+            "https://drive.google.com/uc?export=download&id=1WBv1WFRXLYKlCar7hXRvodhz_4YYanK9",
+            "https://drive.google.com/uc?export=download&id=1sJKzimYQDAbmOFcHD5EkPKtHkepSuBrZ",
+            "https://drive.google.com/uc?export=download&id=1-KBFwG1PpblSba5x0bUCF75UGvQyFMlo",
+            "https://drive.google.com/uc?export=download&id=1-ZO6iFf9StmMEjRpAVwthiQ81y3POlAK",
+            "https://drive.google.com/uc?export=download&id=1077MDdYX3I144dG-_6ybPzOc6uiuL51H",
+            "https://drive.google.com/uc?export=download&id=10BN-2AdJUwEBicdGCJGEqNyspeCcRqfv",
+            "https://drive.google.com/uc?export=download&id=1-8kNlg-gDA6DKOya5ClsdB1JmNljDUDB",
+            "https://drive.google.com/uc?export=download&id=1-9LWigd9PuwBMKyf_HWN2FC5lUID4iWb"
         )
         bookArrayList= arrayListOf()
         fetchData()

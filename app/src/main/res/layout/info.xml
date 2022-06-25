@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <com.google.android.material.card.MaterialCardView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardElevation="20dp"
+                app:cardBackgroundColor="#FDFDFD"
+                app:cardCornerRadius="15dp"
+                app:strokeColor="@color/black"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Rewards"
+                        android:textColor="#2E2A2A"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:justificationMode="inter_word"
+                        android:text="@string/reward"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/nunito_sans_light"
+                        android:layout_margin="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="How To Claim the Rewards:"
+                        android:textColor="#2E2A2A"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:justificationMode="inter_word"
+                        android:text="You need to share the link with atleast 5 people and ask for the RankersID which they can find in 'Refer and Earn' Section on the Homepage and the Halt Page.Then click on 'Claim Your Rewards' button in the same section which will transfer you to the mail page where you need to Enter all the IDs (5 or more) "
+                        android:textSize="12sp"
+                        android:fontFamily="@font/nunito_sans_light"
+                        android:layout_margin="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_margin="10dp"
+                        android:text="As soon as we receive the mail the verification process will start and your rewards will be send to you as quickly as your claim is verified.\n\n
+No. of People you need to refer for:\n
+Reward I - 5+\n
+Reward II - 10+\n
+Reward III - 15+\n
+*If you refer 10 or more people (&lt; 15) then you will be receiving both Reward I and Reward II and if you refer 15 or more people then you will be receiving all the three rewards. "
+                        android:textSize="12sp"
+                        android:fontFamily="@font/nunito_sans_light"
+                    />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

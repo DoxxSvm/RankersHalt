@@ -29,10 +29,10 @@ class JeeBooksPhyFragment: Fragment(R.layout.fragment_jee_books_list),ItemClicke
             "DC Pandey Optics And Modern Physics",
             "DC Pandey Waves And Thermodynamics",
             "IE Irodov Problems in General Physics",
-            "Concept of Physics HC Verma Volume 1",
-            "Concept of Physics HC Verma Volume 2",
-            "Concept of Physics HC Verma Solutions Volume 1",
-            "Concept of Physics HC Verma Solutions Volume 2",
+            "HC Verma Concept of Physics Volume 1",
+            "HC Verma Concept of Physics Volume 2",
+            "HC Verma Concept of Physics Solutions Volume 1",
+            "HC Verma Concept of Physics Solutions Volume 2",
             "Fundamental of Physics - Halliday Resnick",
             "Problems in Physics - SS Crotov",
             "SL Arora (Class 11) Part 1 Chapter 01-08",
@@ -43,10 +43,14 @@ class JeeBooksPhyFragment: Fragment(R.layout.fragment_jee_books_list),ItemClicke
             "Arihant Master the NCERT Physics Class 11 Part 1",
             "Arihant Master the NCERT Physics Class 11 Part 2",
             "Arihant Master the NCERT Physics Class 12 Part 1",
-            "Arihant Master the NCERT Physics Class 12 Part 2"
+            "Arihant Master the NCERT Physics Class 12 Part 2",
+            "NCERT Exemplar Class 11 Physics",
+            "NCERT Exemplar Class 12 Physics",
+            "MTG NCERT Fingertips Physics Class 11",
+            "MTG NCERT Fingertips Physics Class 12"
         )
         links= arrayOf(
-            "https://drive.google.com/utc?d=1_1uxcpSENN63ST7Rcnx5WINOvnlpF3O5&export=download",
+            "https://drive.google.com/uc?export=download&id=1AUasDHgcKe2D4GMAcVKmK0H0yLLbQ9e9",
             "https://drive.google.com/uc?export=download&id=1tlUgqTk-m62tEPbaOIzG9i7Z4v1959EW",
             "https://drive.google.com/uc?export=download&id=19j3RXKKL4g4gp7fkGID3uufyqq0vHJrM",
             "https://drive.google.com/uc?export=download&id=1olzusP6d8uib5jYvQBoGO2SV4YMiwrzX",
@@ -68,7 +72,11 @@ class JeeBooksPhyFragment: Fragment(R.layout.fragment_jee_books_list),ItemClicke
             "https://drive.google.com/uc?export=download&id=1UJry_BCKp4mLqWrrIlpDPnKjlJWYZLN7",
             "https://drive.google.com/uc?export=download&id=18yZnYd-w3fiKNm7dJwiSOCX4ftjb1q4x",
             "https://drive.google.com/uc?export=download&id=1RhqqJWygEW-Az2-kbeyc6MUKyK9HQ3R4",
-            "https://drive.google.com/uc?export=download&id=1VEkDzTF5WpMBxaAletaR9VI-m9R2B1rA"
+            "https://drive.google.com/uc?export=download&id=1VEkDzTF5WpMBxaAletaR9VI-m9R2B1rA",
+            "https://drive.google.com/uc?export=download&id=101MpMOfEnU_HmTJZkvQ8G3sioBKqoAlA",
+            "https://drive.google.com/uc?export=download&id=1HHPDljWDqxyRqcjP6W-ARAtooLdU57X1",
+            "https://drive.google.com/uc?export=download&id=1-Xyal7dxwbcqPVDUyHMNM76YdZ-QzjYL",
+            "https://drive.google.com/uc?export=download&id=1-VqMluP5OhRbaxb79V_9jN8BZhqWLsQN"
         )
         bookArrayList= arrayListOf()
         fetchData()

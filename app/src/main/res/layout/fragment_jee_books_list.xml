@@ -13,7 +13,7 @@
     <androidx.appcompat.widget.SearchView
 
         android:layout_width="wrap_content"
-        android:padding="10dp"
+        android:padding="5dp"
         android:id="@+id/bookListSearchView"
         style="@style/SearchViewStyle"
         android:layout_height="65dp"/>

@@ -1,5 +1,6 @@
 package com.doxx.rankershalt
 
+import android.content.pm.ActivityInfo
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.github.barteksc.pdfviewer.PDFView
@@ -44,12 +45,17 @@ class ViewBook : AppCompatActivity(){
     }
     private fun loadAds(){
         MobileAds.initialize(this) {}
-
+        var count=0
         val adRequest = AdRequest.Builder().build()
         ViewBookadView.loadAd(adRequest)
         ViewBookadView.adListener = object: AdListener() {
             override fun onAdLoaded() {
                 // Code to be executed when an ad finishes loading.
+            }
+
+            override fun onAdFailedToLoad(p0: LoadAdError) {
+                super.onAdFailedToLoad(p0)
+                if(count++<5) ViewBookadView.loadAd(adRequest)
             }
         }
 

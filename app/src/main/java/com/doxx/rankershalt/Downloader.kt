@@ -15,7 +15,6 @@ import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.LoadAdError
 import com.google.android.gms.ads.MobileAds
 import kotlinx.android.synthetic.main.activity_downloader.*
-import java.lang.Exception
 import java.text.DecimalFormat
 
 
@@ -52,6 +51,10 @@ class Downloader : AppCompatActivity() {
             else if(link!=null){
                 startDownload(link)
             }
+        }
+        buttonPrint.setOnClickListener{
+            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(link))
+            startActivity(browserIntent)
         }
         downloader_report_btn.setOnClickListener {
             try {
@@ -98,18 +101,28 @@ class Downloader : AppCompatActivity() {
         downloadId = PRDownloader.download(url, filesDir.absolutePath,name)
             .build()
             .setOnStartOrResumeListener {
-                dialog.setTitle("Download Started")
+                try {
+                    dialog.setTitle("Download Started")
+                }
+                catch (e:Exception){
+                    Toast.makeText(this@Downloader, "Unstable connection...Retry!", Toast.LENGTH_SHORT).show()
+                }
             }
             .setOnPauseListener { }
             .setOnCancelListener {
                 Toast.makeText(this,"Cancelled",Toast.LENGTH_SHORT).show()
             }
             .setOnProgressListener {
-                val percent = it.currentBytes*100/it.totalBytes
-                dialog.progress=percent.toInt()
-                val current = df.format(it.currentBytes/1024/1024.0)
-                val total = df.format(it.totalBytes/1024/1024.0)
-                dialog.setMessage(current.toString()+"MB/"+total+"MB")
+                try{
+                    val percent = it.currentBytes*100/it.totalBytes
+                    dialog.progress=percent.toInt()
+                    val current = df.format(it.currentBytes/1024/1024.0)
+                    val total = df.format(it.totalBytes/1024/1024.0)
+                    dialog.setMessage(current.toString()+"MB/"+total+"MB")
+                }
+                catch (e:Exception){
+                    Toast.makeText(this@Downloader, "Unstable connection...Retry!", Toast.LENGTH_SHORT).show()
+                }
             }
             .start(object : OnDownloadListener {
                 override fun onDownloadComplete() {
@@ -145,14 +158,13 @@ class Downloader : AppCompatActivity() {
     }
     private fun loadAds(){
         MobileAds.initialize(applicationContext) {}
-
+        var count =0;
         val adRequest = AdRequest.Builder().build()
         downloaderadView.loadAd(adRequest)
         downloaderadView.adListener = object: AdListener() {
             override fun onAdLoaded() {
 
             }
-
             override fun onAdFailedToLoad(adError : LoadAdError) {// Code to be executed when an ad request fails.
             }
 

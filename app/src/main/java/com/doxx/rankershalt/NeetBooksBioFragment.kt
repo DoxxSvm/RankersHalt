@@ -21,6 +21,11 @@ class NeetBooksBioFragment: Fragment(R.layout.fragment_jee_books_list),ItemClick
         ecy.layoutManager= LinearLayoutManager(context)
 
         bookName= arrayOf(
+            "NCERT Exemplar Class 11 Biology",
+            "NCERT Exemplar Class 12 Biology",
+            "MTG NCERT Fingertips Biology Class 11 (Chapter 01 - 11)",
+            "MTG NCERT Fingertips Biology Class 11 (Chapter 12 - 22)",
+            "MTG NCERT Fingertips Biology Class 12",
             "Arihant Master The NCERT Biology Vol.1",
             "Arihant Master The NCERT Biology Vol.2",
             "33 Years NEET Solved Paper - Biology",
@@ -32,6 +37,11 @@ class NeetBooksBioFragment: Fragment(R.layout.fragment_jee_books_list),ItemClick
             "Biology Revision Notes - 12th",
         )
         links= arrayOf(
+            "https://drive.google.com/uc?export=download&id=1eVV41e8nk4C9c_JJiGwDQtub2qRdJcII",
+            "https://drive.google.com/uc?export=download&id=1g9kggpbcPzjkUckg-q6TTFgteq-dDXX1",
+            "https://drive.google.com/uc?export=download&id=1-tQHVWFj8f_OfiwfuOLYlETbgXs_27s3",
+            "https://drive.google.com/uc?export=download&id=1-sT74KqHMtD9wBpf6Jo3V6ct6w9X6Ny5",
+            "https://drive.google.com/uc?export=download&id=1-x5Bb1MFn1ETYqhWaJ7ZGNMeJmYP7YdX",
             "https://drive.google.com/uc?id=1M2DuC7h5_UobWyk-1IuL0aSB80sbfMpP&export=download",
             "https://drive.google.com/uc?id=15b88baAXSYhGzIij76H2iYZa7m5yYDy0&export=download",
             "https://drive.google.com/uc?export=download&id=1zY95L_9S60toOfgl77eXMhpQpgt1Qo7c",

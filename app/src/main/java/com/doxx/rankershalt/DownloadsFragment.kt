@@ -21,9 +21,10 @@ class DownloadsFragment : Fragment(R.layout.fragment_downloads),ItemClickedDownl
         books= arrayListOf()
         var files= requireActivity().filesDir.listFiles()
         Arrays.sort(files, LastModifiedFileComparator.LASTMODIFIED_REVERSE);
-        if(files.size>0){
+        if(files.size>2){
             for(i in 0..(files.size-1) ){
                 var name = files[i].toString()
+                if(name.contains(".lock")||name.contains(".json")) continue
                 name = name.replace("/data/user/0/com.doxx.rankershalt/files/","")
                 books.add(name)
             }

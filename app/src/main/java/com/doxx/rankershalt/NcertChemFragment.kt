@@ -60,7 +60,7 @@ class NcertChemFragment: Fragment(R.layout.fragment_jee_books_list),ItemClicked 
             "https://drive.google.com/uc?export=download&id=1bhPmFaAhqx3xuV8xB7IgsEdIsLxbZAE2",
             "https://drive.google.com/uc?export=download&id=1tqeVtVINM04fGaidkrHS4fp0vvwjfkHC",
             "https://drive.google.com/uc?export=download&id=1KmEzcgkmXOvw96ZkyDk_e-3UxOJQOcHy",
-            "https://drive.google.com/uc?export=download&id=/1VsvhDrFmy2YlOuyETipm33xKZA4S8C-a",
+            "https://drive.google.com/uc?export=download&id=1VsvhDrFmy2YlOuyETipm33xKZA4S8C-a",
             "https://drive.google.com/uc?export=download&id=12vTcuDDrkXIhgKJFqjHN6HbSqaic_nT7",
             "https://drive.google.com/uc?export=download&id=1TChAzplReJq7u7PlnUa-8B1Af4Kb3jQE",
             "https://drive.google.com/uc?export=download&id=15vOPCRzU-iciE12n0erqA8NxaeINUwaL",
